@@ -1,11 +1,10 @@
-import 'package:e_learning_smk_pi/screens/background_login.dart';
 import 'package:e_learning_smk_pi/screens/text_atas_e-learning.dart';
 import 'package:e_learning_smk_pi/widgets/circle.dart';
 import 'package:e_learning_smk_pi/widgets/usernamelogin.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +12,17 @@ class HomeScreen extends StatelessWidget {
       // appBar: AppBar(),
       body: Stack(
         children: [
-          Positioned(
+          const Positioned(
             left: 0,
             bottom: 190,
             child: CircleLoginSedang(),
           ),
-          Positioned(
+          const Positioned(
             right: 0,
             top: 150,
             child: CircleLoginBiruGelap(),
           ),
-          Positioned(
+          const Positioned(
             left: 70,
             top: 250,
             child: CircleLoginKecil(),
@@ -38,22 +37,22 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     child: Image.asset('assets/image/image 1.png'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 28,
                   ),
-                  TextAtasLogin(),
-                  SizedBox(
+                  const TextAtasLogin(),
+                  const SizedBox(
                     height: 45.0,
                   ),
-                  UserNameLogin(),
-                  SizedBox(
+                  const UserNameLogin(),
+                  const SizedBox(
                     height: 34,
                   ),
-                  UserNameLogin(),
-                  SizedBox(
+                  const UserNameLogin(),
+                  const SizedBox(
                     height: 70,
                   ),
-                  UserNameLogin(),
+                  const UserNameLogin(),
                 ],
               ),
             ),

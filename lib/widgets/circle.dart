@@ -5,7 +5,7 @@ class CircleLoginKecil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 60,
       height: 60,
       // color: Colors.grey,
@@ -15,7 +15,7 @@ class CircleLoginKecil extends StatelessWidget {
             top: 0,
             left: 0,
             child: CustomPaint(
-              size: Size(50, 50),
+              size: const Size(50, 50),
               painter: CirclePainterFillBiru(),
             ),
           ),
@@ -23,7 +23,7 @@ class CircleLoginKecil extends StatelessWidget {
             bottom: 0,
             right: 0,
             child: CustomPaint(
-              size: Size(50, 50),
+              size: const Size(50, 50),
               painter: CirclePainterStrokeBiru(),
             ),
           ),
@@ -38,7 +38,7 @@ class CircleLoginSedang extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 110,
       height: 105,
       // color: Colors.grey,
@@ -48,7 +48,7 @@ class CircleLoginSedang extends StatelessWidget {
             bottom: 5,
             left: -50,
             child: CustomPaint(
-              size: Size(90, 90),
+              size: const Size(90, 90),
               painter: CirclePainterFillBiru(),
             ),
           ),
@@ -56,7 +56,7 @@ class CircleLoginSedang extends StatelessWidget {
             top: 1,
             left: -30,
             child: CustomPaint(
-              size: Size(90, 90),
+              size: const Size(90, 90),
               painter: CirclePainterStrokeBiruKecil(),
             ),
           ),
@@ -71,7 +71,7 @@ class CircleLoginBiruGelap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 110,
       height: 105,
       // color: Colors.grey,
@@ -81,7 +81,7 @@ class CircleLoginBiruGelap extends StatelessWidget {
             bottom: 0,
             right: -25,
             child: CustomPaint(
-              size: Size(90, 90),
+              size: const Size(90, 90),
               painter: CirclePainterFillBiruGelap(),
             ),
           ),
@@ -139,7 +139,7 @@ class CirclePainterStrokeBiruKecil extends CustomPainter {
 
 class CirclePainterStrokeBiruCerah extends CustomPainter {
   final _paint = Paint()
-    ..color = Color(0xFF17D6E2)
+    ..color = const Color(0xFF17D6E2)
     ..strokeWidth = 2
     // Use [PaintingStyle.fill] if you want the circle to be filled.
     ..style = PaintingStyle.stroke;
@@ -158,7 +158,7 @@ class CirclePainterStrokeBiruCerah extends CustomPainter {
 
 class CirclePainterFillBiru extends CustomPainter {
   final _paint = Paint()
-    ..color = Color(0xFF17D6E2)
+    ..color = const Color(0xFF17D6E2)
     ..strokeWidth = 4
     // Use [PaintingStyle.fill] if you want the circle to be filled.
     ..style = PaintingStyle.fill;
@@ -177,7 +177,7 @@ class CirclePainterFillBiru extends CustomPainter {
 
 class CirclePainterFillBiruGelap extends CustomPainter {
   final _paint = Paint()
-    ..color = Color(0xFF13005A)
+    ..color = const Color(0xFF13005A)
     ..strokeWidth = 4
     // Use [PaintingStyle.fill] if you want the circle to be filled.
     ..style = PaintingStyle.fill;
