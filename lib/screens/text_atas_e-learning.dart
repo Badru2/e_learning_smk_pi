@@ -9,8 +9,8 @@ class TextAtasLogin extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 148,
-          height: 71,
+          width: MediaQuery.of(context).size.width * 0.4,
+          // height: 71,
           alignment: Alignment.center,
           child: Text('E-LEARNING SMK PI',
               textAlign: TextAlign.center,
@@ -21,11 +21,11 @@ class TextAtasLogin extends StatelessWidget {
               )),
         ),
         const SizedBox(
-          height: 12,
+          height: 23,
         ),
         const SizedBox(
           width: 290,
-          height: 69,
+          // height: 69,
           child: Text(
             'Selamat datang di E-Learning SMK PI, silah kan masukan nomor siswa dan password yang telah diberikan untuk login ',
             style: TextStyle(

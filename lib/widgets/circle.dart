@@ -73,7 +73,7 @@ class CircleLoginBiruGelap extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 110,
-      height: 105,
+      height: 110,
       // color: Colors.grey,
       child: Stack(
         children: [
