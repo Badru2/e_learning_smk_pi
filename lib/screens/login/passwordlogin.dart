@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Password1 extends StatefulWidget {
   const Password1({super.key});
@@ -10,7 +11,6 @@ class Password1 extends StatefulWidget {
 class _Password1State extends State<Password1> {
   var _sembunyi = true;
 
-  @override
   void iniState() {
     super.initState();
   }
@@ -22,7 +22,7 @@ class _Password1State extends State<Password1> {
         TextFormField(
           obscureText: _sembunyi,
           onChanged: ((value) {}),
-          obscuringCharacter: ".",
+          obscuringCharacter: "*",
           decoration: InputDecoration(
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             hintText: 'Password',
@@ -43,4 +43,6 @@ class _Password1State extends State<Password1> {
   }
 }
 
-class SetState {}
+class SetState {
+  SetState(int Function() param0);
+}
