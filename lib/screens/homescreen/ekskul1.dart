@@ -18,7 +18,8 @@ class EkskulSatu extends StatelessWidget {
             child: Container(
               width: 153,
               height: 100,
-              child: Center(
+              child: Padding(
+                padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text(
                   'ayo ikut Ekstrakulikuler futsal!',
                   style: TextStyle(

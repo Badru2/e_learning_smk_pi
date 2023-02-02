@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -62,7 +63,7 @@ class TugasHomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  child: SvgPicture.network(''),
+                  child: SvgPicture.asset(iconNoteBook),
                 ),
                 SizedBox(
                   height: 11,
@@ -130,7 +131,7 @@ class AbsenHomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            child: Icon(Icons.menu_book),
+            child: SvgPicture.asset(iconAbsen),
           ),
           SizedBox(
             height: 11,
@@ -169,7 +170,7 @@ class EkstrakulikulerHomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            child: Icon(Icons.menu_book),
+            child: SvgPicture.asset(iconEkskul),
           ),
           SizedBox(
             height: 11,

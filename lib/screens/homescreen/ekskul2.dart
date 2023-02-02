@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EskulBasket extends StatelessWidget {
-  const EskulBasket({super.key});
+class EkskulDua extends StatelessWidget {
+  const EkskulDua({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,11 @@ class EskulBasket extends StatelessWidget {
           child: Container(
             width: 153,
             height: 100,
-            child: Center(
+            child: Padding(
+              padding: EdgeInsets.only(
+                top: 10,
+                left: 15,
+              ),
               child: Text(
                 'Ayo Ikut Ekstrakulikuler Basket!',
                 style: TextStyle(
