@@ -1,11 +1,13 @@
-import 'package:e_learning_smk_pi/screens/basket/bacaberita_screen.dart';
-import 'package:e_learning_smk_pi/screens/basket/basket.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/bacamading_screen.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/ekskul2.dart';
 import 'package:e_learning_smk_pi/screens/homescreen/carousel_iklan.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/e_mading_satu.dart';
 import 'package:e_learning_smk_pi/screens/homescreen/ekskul1.dart';
 import 'package:e_learning_smk_pi/screens/homescreen/kumpulan_tombol.dart';
-import 'package:e_learning_smk_pi/screens/paduan/lomba_paduansuara.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/e_mading_dua.dart';
+import 'package:e_learning_smk_pi/widgets/appbar.dart';
+import 'package:e_learning_smk_pi/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,42 +15,34 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 70,
-        backgroundColor: Colors.white,
-        leading: Builder(
-          builder: (BuildContext) {
-            return IconButton(
-              icon: Icon(
-                Icons.settings,
-                color: Colors.black,
-                size: 40,
+      drawer: Drawer(
+        width: MediaQuery.of(context).size.width,
+        child: ListView(
+          children: [
+            ListTile(
+              leading: Icon(Icons.arrow_back_ios_new),
+              title: Text(
+                'Setelan',
+                style: TextStyle(
+                  fontFamily: 'Outfit',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            );
-          },
-        ),
-        title: const Text(
-          'E-Learning SMK PI',
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20.0),
-            child: GestureDetector(
-              onTap: () {},
-              child: SvgPicture.asset(
-                'assets/image/image 2.svg',
-                // scale: 1.5,
-              ),
+              onTap: () => Navigator.pop(context),
             ),
-          ),
-        ],
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Laporan Bug'),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Tentang'),
+            ),
+          ],
+        ),
       ),
+      appBar: AppbarCustom(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -111,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  EskulBasket(),
+                  EkskulDua(),
                   SizedBox(
                     height: 20,
                   ),
@@ -126,54 +120,22 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  LombaPaduanSuara1(),
-                  BacaBerita1(),
+                  EmadingSatu(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  EmadingDua(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  BacaMading(),
                 ],
               ),
             ),
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(30), topLeft: Radius.circular(30)),
-          boxShadow: [
-            BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-          ),
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: Color(0xFF2A39D6),
-            currentIndex: 0,
-            iconSize: 40.0,
-            items: <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Beranda',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.book),
-                label: 'Kelas',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_month),
-                label: 'Jadwal',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Profil',
-              ),
-            ],
-            unselectedItemColor: Colors.white,
-          ),
-        ),
-      ),
+      bottomNavigationBar: BottomNavigatonBarCustom(),
     );
   }
 }
