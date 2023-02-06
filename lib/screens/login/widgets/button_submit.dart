@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/screens/homescreen/homescreen.dart';
 import 'package:flutter/material.dart';
 
 class ButtonSubmitLogin extends StatelessWidget {
@@ -17,7 +18,12 @@ class ButtonSubmitLogin extends StatelessWidget {
           Color(0xFF13005A),
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+        );
+      },
       child: const Center(
         child: Text(
           'LOGIN',

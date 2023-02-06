@@ -42,6 +42,11 @@ dependencies:
   iconify_flutter: ^0.0.5
   smooth_page_indicator: ^1.0.0+2
   flutter_svg: ^1.1.6
+  flutter_calendar_week: ^3.0.0
+  flutter_date_picker_timeline: ^0.3.3
+  intl: ^0.17.0
+  flutter_native_timezone: ^2.0.0
+  flutter_markdown: ^0.6.13+1
 
 dev_dependencies:
   flutter_test:

@@ -1,8 +1,8 @@
-import 'package:e_learning_smk_pi/screens/login/text_atas_e-learning.dart';
-import 'package:e_learning_smk_pi/screens/login/button_submit.dart';
-import 'package:e_learning_smk_pi/screens/login/circle.dart';
-import 'package:e_learning_smk_pi/screens/login/passwordlogin.dart';
-import 'package:e_learning_smk_pi/screens/login/usernamelogin.dart';
+import 'package:e_learning_smk_pi/screens/login/widgets/text_atas_e-learning.dart';
+import 'package:e_learning_smk_pi/screens/login/widgets/button_submit.dart';
+import 'package:e_learning_smk_pi/screens/login/widgets/circle.dart';
+import 'package:e_learning_smk_pi/screens/login/widgets/passwordlogin.dart';
+import 'package:e_learning_smk_pi/screens/login/widgets/usernamelogin.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {

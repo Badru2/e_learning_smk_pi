@@ -1,3 +1,5 @@
+import 'package:e_learning_smk_pi/screens/homescreen/homescreen.dart';
+import 'package:e_learning_smk_pi/screens/profile/profile_screen.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,8 +9,10 @@ class BottomNavigatonBarCustom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
+    int _currentTabIndex = 0;
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [Color(0xFF2A39D6), Color(0xFF270A93)],
           begin: Alignment.topLeft,
@@ -23,7 +27,7 @@ class BottomNavigatonBarCustom extends StatelessWidget {
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(30.0),
           topRight: Radius.circular(30.0),
         ),
@@ -67,8 +71,47 @@ class BottomNavigatonBarCustom extends StatelessWidget {
             ),
           ],
           unselectedItemColor: Colors.white,
+          // onTap: _onTap,
+          // currentIndex: _currentTabIndex,
         ),
       ),
     );
   }
+
+  // _onTap(int tabIndex) {
+  //   switch (tabIndex) {
+  //     case 0:
+  //       _navigatorKey.currentState?.pushReplacementNamed("Beranda");
+  //       break;
+  //     case 1:
+  //       _navigatorKey.currentState?.pushReplacementNamed("Kelas");
+  //       break;
+  //     case 2:
+  //       _navigatorKey.currentState?.pushReplacementNamed("Jadwal");
+  //       break;
+  //     case 3:
+  //       _navigatorKey.currentState?.pushReplacementNamed("Profil");
+  //       break;
+  //   }
+  //   setState(() {
+  //     _currentTabIndex = tabIndex;
+  //   });
+  // }
+
+  // Route<dynamic> generateRoute(RouteSettings settings) {
+  //   switch (settings.name) {
+  //     case "Beranda":
+  //       return MaterialPageRoute(builder: (context) => HomeScreen());
+  //     case "Kelas":
+  //       return MaterialPageRoute(
+  //           builder: (context) => Container(
+  //               color: Colors.green, child: Center(child: Text("Settings"))));
+  //     case "Jadwal":
+  //       return MaterialPageRoute(
+  //           builder: (context) => Container(
+  //               color: Colors.green, child: Center(child: Text("Settings"))));
+  //     default:
+  //       return MaterialPageRoute(builder: (context) => ProfileScreen());
+  //   }
+  // }
 }
