@@ -1,12 +1,13 @@
-import 'package:e_learning_smk_pi/screens/homescreen/bacamading_screen.dart';
-import 'package:e_learning_smk_pi/screens/homescreen/ekskul2.dart';
-import 'package:e_learning_smk_pi/screens/homescreen/carousel_iklan.dart';
-import 'package:e_learning_smk_pi/screens/homescreen/e_mading_satu.dart';
-import 'package:e_learning_smk_pi/screens/homescreen/ekskul1.dart';
-import 'package:e_learning_smk_pi/screens/homescreen/kumpulan_tombol.dart';
-import 'package:e_learning_smk_pi/screens/homescreen/e_mading_dua.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/widgets/bacamading_screen.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/widgets/ekskul2.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/widgets/carousel_iklan.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/widgets/e_mading_satu.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/widgets/ekskul1.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/widgets/kumpulan_tombol.dart';
+import 'package:e_learning_smk_pi/screens/homescreen/widgets/e_mading_dua.dart';
 import 'package:e_learning_smk_pi/widgets/appbar.dart';
 import 'package:e_learning_smk_pi/widgets/bottom_navigation_bar.dart';
+import 'package:e_learning_smk_pi/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,33 +16,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        width: MediaQuery.of(context).size.width,
-        child: ListView(
-          children: [
-            ListTile(
-              leading: Icon(Icons.arrow_back_ios_new),
-              title: Text(
-                'Setelan',
-                style: TextStyle(
-                  fontFamily: 'Outfit',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              onTap: () => Navigator.pop(context),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Laporan Bug'),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Tentang'),
-            ),
-          ],
-        ),
-      ),
+      drawer: const CustomDrawer(),
       appBar: AppbarCustom(),
       body: SingleChildScrollView(
         child: Column(
@@ -135,7 +110,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigatonBarCustom(),
+      bottomNavigationBar: const BottomNavigatonBarCustom(),
     );
   }
 }

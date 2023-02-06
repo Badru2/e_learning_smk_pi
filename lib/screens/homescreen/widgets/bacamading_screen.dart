@@ -8,7 +8,7 @@ class BacaMading extends StatelessWidget {
     return Container(
       height: 88,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(10),
         ),
         border: Border.all(
@@ -20,9 +20,9 @@ class BacaMading extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,
-            child: Text(
+            child: const Text(
               'Baca berita Lainnya DiSini',
               style: TextStyle(
                   fontFamily: 'Roboto',
@@ -32,7 +32,7 @@ class BacaMading extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text(
+            child: const Text(
               'Baca Mading',
             ),
           )
