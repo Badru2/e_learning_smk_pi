@@ -1,6 +1,5 @@
 import 'package:e_learning_smk_pi/screens/tugas/tugas_satu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class TextTugasScreen extends StatelessWidget {
   const TextTugasScreen({super.key});
@@ -43,15 +42,15 @@ class TugasScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 107,
               child: Image.asset(
                 'assets/image/image 8.png',
                 fit: BoxFit.cover,
               ),
-              width: MediaQuery.of(context).size.width,
-              height: 107,
             ),
-            TextTugasScreen(),
-            BagianTugasMtk(),
+            const TextTugasScreen(),
+            const BagianTugasMtk(),
           ],
         ),
       ),

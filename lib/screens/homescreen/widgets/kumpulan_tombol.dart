@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/screens/daftar_ekskul/daftar_ekskul.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
@@ -163,7 +164,12 @@ class EkstrakulikulerHomeScreen extends StatelessWidget {
           backgroundColor: Colors.transparent, shadowColor: Colors.transparent,
           // onPressed: () {},
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => DaftarEkskul()),
+          );
+        },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

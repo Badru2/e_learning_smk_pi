@@ -8,6 +8,7 @@ import 'package:e_learning_smk_pi/screens/homescreen/widgets/e_mading_dua.dart';
 import 'package:e_learning_smk_pi/widgets/appbar.dart';
 import 'package:e_learning_smk_pi/widgets/bottom_navigation_bar.dart';
 import 'package:e_learning_smk_pi/widgets/drawer.dart';
+import 'package:e_learning_smk_pi/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -110,7 +111,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomNavigatonBarCustom(),
+      // bottomNavigationBar: Navbar(),
     );
   }
 }

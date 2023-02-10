@@ -3,8 +3,6 @@ import 'package:e_learning_smk_pi/widgets/appbar_back.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/bottom_navigation_bar.dart';
-
 class DaftarEkskul extends StatefulWidget {
   const DaftarEkskul({super.key});
 
@@ -28,13 +26,13 @@ class _DaftarEkskulState extends State<DaftarEkskul> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarBack(),
-      bottomNavigationBar: BottomNavigatonBarCustom(),
+      appBar: const AppBarBack(),
+      // bottomNavigationBar: Navbar(),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Center(
             child: Container(
-              padding: EdgeInsets.only(top: 20, bottom: 20),
+              padding: const EdgeInsets.only(top: 20, bottom: 20),
               width: MediaQuery.of(context).size.width * 0.95,
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.black, width: 2),
@@ -69,7 +67,7 @@ class _DaftarEkskulState extends State<DaftarEkskul> {
                   const SizedBox(
                     child: CheckboxDaftar(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Container(
@@ -77,11 +75,11 @@ class _DaftarEkskulState extends State<DaftarEkskul> {
                     height: 2,
                     color: Colors.black,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   ListTile(
-                    title: Text(
+                    title: const Text(
                       'Alasan kamu ikut ekstrakulikuler tersebut.*',
                       style: font15w6,
                     ),
@@ -92,17 +90,17 @@ class _DaftarEkskulState extends State<DaftarEkskul> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Container(
                     alignment: Alignment.centerLeft,
-                    margin: EdgeInsets.only(left: 20),
+                    margin: const EdgeInsets.only(left: 20),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF5783DB),
+                        backgroundColor: const Color(0xFF5783DB),
                       ),
-                      child: Text(
+                      child: const Text(
                         'Kirim',
                         style: font12w6w,
                       ),

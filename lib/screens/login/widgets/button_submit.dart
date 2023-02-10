@@ -1,4 +1,5 @@
 import 'package:e_learning_smk_pi/screens/homescreen/homescreen.dart';
+import 'package:e_learning_smk_pi/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
 class ButtonSubmitLogin extends StatelessWidget {
@@ -7,12 +8,6 @@ class ButtonSubmitLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      // height: 50,
-      // margin: const EdgeInsets.symmetric(horizontal: 50),
-      // decoration: BoxDecoration(
-      //   color: const Color(0xFF13005A),
-      //   borderRadius: BorderRadiusDirectional.circular(10),
-      // ),
       style: const ButtonStyle(
         backgroundColor: MaterialStatePropertyAll(
           Color(0xFF13005A),
@@ -21,7 +16,7 @@ class ButtonSubmitLogin extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const HomeScreen()),
+          MaterialPageRoute(builder: (context) => Navbar()),
         );
       },
       child: const Center(

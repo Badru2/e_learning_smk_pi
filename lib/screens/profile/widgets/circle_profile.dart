@@ -6,7 +6,7 @@ class CircleProfileAtas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 150,
       height: 150,
       child: Stack(children: [
@@ -14,7 +14,7 @@ class CircleProfileAtas extends StatelessWidget {
           right: -20,
           top: -20,
           child: CustomPaint(
-            size: Size(130, 130),
+            size: const Size(130, 130),
             painter: Circle(),
           ),
         ),
@@ -28,7 +28,7 @@ class CircleProfileBawah extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 150,
       height: 150,
       child: Stack(children: [
@@ -36,7 +36,7 @@ class CircleProfileBawah extends StatelessWidget {
           bottom: -20,
           left: -20,
           child: CustomPaint(
-            size: Size(130, 130),
+            size: const Size(130, 130),
             painter: Circle(),
           ),
         ),

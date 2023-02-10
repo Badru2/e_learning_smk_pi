@@ -32,7 +32,7 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
       ),
       child: Column(
         children: [
-          ListTile(
+          const ListTile(
             title: Text(
               'Ekstrakulikuler. *',
               style: font20w6b,
@@ -41,13 +41,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: futsal,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => futsal = value!));
             },
-            title: Text(
+            title: const Text(
               'Futsal',
               style: font10w6,
             ),
@@ -55,13 +55,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: basket,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => basket = value!));
             },
-            title: Text(
+            title: const Text(
               'Basket',
               style: font10w6,
             ),
@@ -69,13 +69,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: pramuka,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => pramuka = value!));
             },
-            title: Text(
+            title: const Text(
               'Pramuka',
               style: font10w6,
             ),
@@ -83,13 +83,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: math,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => math = value!));
             },
-            title: Text(
+            title: const Text(
               'Math Club',
               style: font10w6,
             ),
@@ -97,13 +97,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: marching,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => marching = value!));
             },
-            title: Text(
+            title: const Text(
               'Marching Band',
               style: font10w6,
             ),
@@ -111,13 +111,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: volly,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => volly = value!));
             },
-            title: Text(
+            title: const Text(
               'Volly',
               style: font10w6,
             ),
@@ -125,13 +125,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: badmintom,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => badmintom = value!));
             },
-            title: Text(
+            title: const Text(
               'Badminton',
               style: font10w6,
             ),
@@ -139,13 +139,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: japanese,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => japanese = value!));
             },
-            title: Text(
+            title: const Text(
               'Japanese Club',
               style: font10w6,
             ),
@@ -153,13 +153,13 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: english,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => english = value!));
             },
-            title: Text(
+            title: const Text(
               'English Club',
               style: font10w6,
             ),
@@ -167,19 +167,19 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
           CheckboxListTile(
             dense: true,
             activeColor: Colors.black,
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             value: bajak,
             controlAffinity: ListTileControlAffinity.leading,
             onChanged: (value) {
               setState((() => bajak = value!));
             },
-            title: Text(
+            title: const Text(
               'Bajak (Software)',
               style: font10w6,
             ),
           ),
           CheckboxListTile(
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
             dense: true,
             activeColor: Colors.black,
             value: silat,
@@ -187,7 +187,7 @@ class _CheckboxDaftarState extends State<CheckboxDaftar> {
             onChanged: (value) {
               setState((() => silat = value!));
             },
-            title: Text(
+            title: const Text(
               'Pencak Silat',
               style: font10w6,
             ),

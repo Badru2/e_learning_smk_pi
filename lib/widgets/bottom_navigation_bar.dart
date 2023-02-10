@@ -4,8 +4,8 @@ import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class BottomNavigatonBarCustom extends StatelessWidget {
-  const BottomNavigatonBarCustom({super.key});
+class BottomNavigationBarCustom extends StatelessWidget {
+  const BottomNavigationBarCustom({super.key});
 
   @override
   Widget build(BuildContext context) {

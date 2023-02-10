@@ -1,5 +1,5 @@
-import 'package:e_learning_smk_pi/screens/homescreen/homescreen.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
+import 'package:e_learning_smk_pi/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -14,7 +14,12 @@ class AppBarBack extends StatelessWidget with PreferredSizeWidget {
         builder: (BuildContext) {
           return IconButton(
             icon: SvgPicture.asset(iconCross),
-            onPressed: () => const HomeScreen(),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Navbar()),
+              );
+            },
             // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
           );
         },

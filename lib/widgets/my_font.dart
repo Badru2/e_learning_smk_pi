@@ -36,8 +36,7 @@ const font20w6 = TextStyle(
 );
 
 const font20w6b = TextStyle(
-  // color: Colors.white,
-  // fontFamily: 'Outfit',
+  fontFamily: 'Outfit',
   fontSize: 20,
   fontWeight: FontWeight.w600,
 );
@@ -51,6 +50,12 @@ const textDrawer = TextStyle(
 const font15w6 = TextStyle(
   fontSize: 15,
   fontWeight: FontWeight.w600,
+);
+
+const font15w6w = TextStyle(
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
 );
 
 const font12w6 = TextStyle(
@@ -67,6 +72,12 @@ const font10w5 = TextStyle(
 const font10w6 = TextStyle(
   fontSize: 10,
   fontWeight: FontWeight.w600,
+);
+
+const font10w6w = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
 );
 
 const font12w6w = TextStyle(

@@ -38,7 +38,7 @@ class BagianTugasMtk extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
+            children: const <Widget>[
               SizedBox(
                 child: Text('523552253'),
               ),
