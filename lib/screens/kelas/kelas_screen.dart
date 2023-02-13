@@ -1,9 +1,5 @@
-import 'package:e_learning_smk_pi/screens/ikut_kelas/ikut_kelas_screen.dart';
 import 'package:e_learning_smk_pi/screens/kelas/pelajaran_kelas.dart';
-import 'package:e_learning_smk_pi/widgets/my_font.dart';
-import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class KelasScreens extends StatefulWidget {
   const KelasScreens({super.key});
@@ -52,35 +48,9 @@ class _KelasScreensState extends State<KelasScreens> {
             SizedBox(
               height: 20,
             ),
-            PelajaranKelas(),
+            // PelajaranKelas(),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Container(
-          width: 100,
-          height: 100,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFF2A39D6),
-                Color(0xFF13005A),
-              ],
-            ),
-          ),
-          child: const Icon(
-            Icons.add,
-            size: 30,
-          ),
-        ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const IkutKelasScreen()),
-          );
-        },
-        // label: Text('+'),
       ),
     );
   }

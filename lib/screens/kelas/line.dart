@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class LinePelajaran extends StatelessWidget {
   const LinePelajaran({super.key});
@@ -10,6 +8,19 @@ class LinePelajaran extends StatelessWidget {
     return Container(
       height: 70,
       width: 2,
+      color: Colors.black,
+    );
+  }
+}
+
+class LineFullWidth extends StatelessWidget {
+  const LineFullWidth({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 1,
       color: Colors.black,
     );
   }

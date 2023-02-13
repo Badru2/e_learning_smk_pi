@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/screens/berita/berita.dart';
 import 'package:flutter/material.dart';
 
 class BacaMading extends StatelessWidget {
@@ -31,7 +32,12 @@ class BacaMading extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BagianEMading()),
+              );
+            },
             child: const Text(
               'Baca Mading',
             ),

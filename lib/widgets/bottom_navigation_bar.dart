@@ -1,5 +1,3 @@
-import 'package:e_learning_smk_pi/screens/homescreen/homescreen.dart';
-import 'package:e_learning_smk_pi/screens/profile/profile_screen.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

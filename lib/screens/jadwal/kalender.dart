@@ -1,10 +1,32 @@
-import 'package:e_learning_smk_pi/screens/jadwal/date_picker.dart';
 import 'package:e_learning_smk_pi/screens/jadwal/ekstrakulikuler.dart';
 import 'package:e_learning_smk_pi/screens/jadwal/pelajaran.dart';
 import 'package:e_learning_smk_pi/widgets/my_border.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_local.dart';
+
+extension toLokalTime on DateTime {
+  String? toLokal() {
+    initializeDateFormatting();
+    try {
+      return new DateFormat.yMMMMd('id').format(this);
+    } catch (e) {
+      return null;
+    }
+  }
+}
+
+extension toHariTime on DateTime {
+  String? toHari() {
+    initializeDateFormatting();
+    try {
+      return new DateFormat.EEEE('id').format(this);
+    } catch (e) {
+      return null;
+    }
+  }
+}
 
 class KalenderJadwal extends StatefulWidget {
   const KalenderJadwal({super.key});
@@ -29,7 +51,7 @@ List months = [
 ];
 var someDateTime = DateTime.now();
 var mon = someDateTime.month;
-String formattedDate = DateFormat.y().format(someDateTime);
+String formattedDate = DateFormat.yMEd().format(someDateTime);
 var active = 0;
 int _buttonindex = 0;
 
@@ -41,8 +63,6 @@ final _pilih = [
 class _KalenderJadwalState extends State<KalenderJadwal> {
   @override
   Widget build(BuildContext context) {
-    print(formattedDate);
-    print(months[mon]);
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
@@ -63,23 +83,30 @@ class _KalenderJadwalState extends State<KalenderJadwal> {
                     ),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Text(months[mon - 1], style: font20w6b),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(formattedDate, style: font20w6b)
-                          ],
+                        Container(
+                          margin: EdgeInsets.only(left: 15, right: 15),
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                // width: MediaQuery.of(context).size.width * 0.5,
+                                child: Text(
+                                  DateTime.now().toHari().toString(),
+                                  style: font20w6b,
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  DateTime.now().toLokal().toString(),
+                                  style: font20w6b,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        const SizedBox(
-                          height: 23,
-                        ),
-                        const SizedBox(
-                          child: DatePicker(),
-                        ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: 10,
                         ),
                         SizedBox(
                           child: Row(

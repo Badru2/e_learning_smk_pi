@@ -17,7 +17,8 @@ class EkskulSatu extends StatelessWidget {
             right: 40,
             top: 47,
             child: Container(
-              width: 153,
+              // width: 153,
+              width: MediaQuery.of(context).size.width * 0.4,
               height: 100,
               decoration: BoxDecoration(
                 color: const Color(0xFF13005A).withOpacity(0.5),

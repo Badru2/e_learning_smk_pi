@@ -1,10 +1,11 @@
 import 'package:e_learning_smk_pi/screens/kelas/detail_kelas/detail_kelas_screens.dart';
+import 'package:e_learning_smk_pi/screens/kelas/detail_kelas/detailmateri.dart';
 import 'package:e_learning_smk_pi/screens/kelas/line.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 
-class PelajaranKelas extends StatelessWidget {
-  const PelajaranKelas({super.key});
+class Materi extends StatelessWidget {
+  const Materi({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +22,7 @@ class PelajaranKelas extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => const DetailKelasScreens()),
+              MaterialPageRoute(builder: (context) => const DetailMateri()),
             );
           },
           child: Column(
@@ -33,18 +33,19 @@ class PelajaranKelas extends StatelessWidget {
                     // margin: EdgeInsets.only(left: 5),
                     child: Column(
                       children: [
-                        // const SizedBox(
-                        //   height: 10,
-                        // ),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         const ListTile(
                           dense: false,
                           title: Text(
-                            'Matematika',
-                            style: font20w6,
-                          ),
-                          subtitle: Text(
-                            'XI RPL',
+                            'Materi #1',
                             style: font10w6w,
+                          ),
+                          // minVerticalPadding: -4,
+                          subtitle: Text(
+                            'Persamaan Linear',
+                            style: font20w6,
                           ),
                           visualDensity:
                               VisualDensity(horizontal: 0, vertical: -4),
@@ -58,8 +59,8 @@ class PelajaranKelas extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const <Widget>[
                               Text(
-                                'Iis',
-                                style: font15w6w,
+                                '26-01-2023',
+                                style: font10w6w,
                               ),
                             ],
                           ),

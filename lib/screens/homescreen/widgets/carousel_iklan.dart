@@ -32,7 +32,7 @@ class _CarouselHomeScreenState extends State<CarouselHomeScreen> {
               return buildImage(imgLists, index);
             },
             options: CarouselOptions(
-              height: 165,
+              height: MediaQuery.of(context).size.height * 0.2,
               autoPlay: true,
               onPageChanged: (index, reason) =>
                   SetState(() => activeIndex = index),

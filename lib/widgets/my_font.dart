@@ -50,6 +50,7 @@ const textDrawer = TextStyle(
 const font15w6 = TextStyle(
   fontSize: 15,
   fontWeight: FontWeight.w600,
+  color: Colors.black,
 );
 
 const font15w6w = TextStyle(
@@ -61,6 +62,12 @@ const font15w6w = TextStyle(
 const font12w6 = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w600,
+  color: Colors.black,
+);
+
+const font12w5 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
   color: Colors.black,
 );
 
@@ -84,4 +91,22 @@ const font12w6w = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w600,
   color: Colors.white,
+);
+
+const font11w5 = TextStyle(
+  fontSize: 11,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
+);
+
+const font7w5 = TextStyle(
+  fontSize: 7,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
+);
+
+const font30w7 = TextStyle(
+  fontSize: 30,
+  fontWeight: FontWeight.w700,
+  color: Colors.black,
 );

@@ -12,20 +12,13 @@ class AppbarCustom extends StatelessWidget with PreferredSizeWidget {
     key:
     scaffoldKey;
     return AppBar(
-      toolbarHeight: 70,
+      toolbarHeight: MediaQuery.of(context).size.height * 0.5,
       backgroundColor: Colors.white,
       leading: Builder(
         builder: (BuildContext) {
           return IconButton(
             icon: SvgPicture.asset(iconSetting),
-            // icon: Icon(
-            //   Icons.settings,
-            //   color: Colors.black,
-            //   size: 40,
-            // ),
             onPressed: () => Scaffold.of(context).openDrawer(),
-            // ScaffoldKey.current(context).openDrawer();
-
             tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
           );
         },

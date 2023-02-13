@@ -10,13 +10,15 @@ class EmadingSatu extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 310,
+          // height: 310,
+          height: MediaQuery.of(context).size.height * 0.45,
           width: MediaQuery.of(context).size.width,
           decoration: borderEmading,
           child: Column(
             children: [
               SizedBox(
-                height: 157,
+                // height: 157,
+                height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.width,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
@@ -28,13 +30,19 @@ class EmadingSatu extends StatelessWidget {
                   ),
                 ),
               ),
+              const ListTile(
+                dense: true,
+                visualDensity: VisualDensity(vertical: -3),
+                title: Text(
+                  'Juara 1 Lomba Matematika',
+                  style: h3,
+                ),
+              ),
               const SizedBox(
                 child: ListTile(
+                  dense: true,
+                  visualDensity: VisualDensity(vertical: -4),
                   title: Text(
-                    'Juara 1 Lomba Matematika',
-                    style: h3,
-                  ),
-                  subtitle: Text(
                     'Siswa SMK PI Berhasil Menjuarai Lomba Matematika SeBandung Raya Pada Tanggal 16/1/2023. Ayo kita beri ucapan selamat kepada para pemenang lomba yang sudah membanggakan nama sekolah kita.',
                     style: textEmading,
                   ),
@@ -44,7 +52,9 @@ class EmadingSatu extends StatelessWidget {
                 height: 10,
               ),
               SizedBox(
-                height: 24,
+                // alignment: Alignment.centerLeft,
+                height: MediaQuery.of(context).size.height * 0.04,
+                // width: MediaQuery.of(context).size.width * 0.3,
                 child: Align(
                   widthFactor: 3,
                   alignment: Alignment.centerLeft,
