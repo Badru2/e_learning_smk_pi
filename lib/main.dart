@@ -1,5 +1,5 @@
-import 'package:e_learning_smk_pi/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'screens/murid/login/login_screen.dart';
 
 void main() => runApp(const MyApp());
 

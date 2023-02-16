@@ -38,78 +38,30 @@ class BottomNavigationBarCustom extends StatelessWidget {
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 iconHome,
-                height: 30,
-                color: Colors.blue,
               ),
               label: 'Beranda',
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 iconKelas,
-                height: 30,
-                color: Colors.white,
               ),
               label: 'Kelas',
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 iconCalendar,
-                height: 30,
-                color: Colors.white,
               ),
               label: 'Jadwal',
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 iconPerson,
-                height: 30,
-                color: Colors.white,
               ),
               label: 'Profil',
             ),
           ],
-          unselectedItemColor: Colors.white,
-          // onTap: _onTap,
-          // currentIndex: _currentTabIndex,
         ),
       ),
     );
   }
-
-  // _onTap(int tabIndex) {
-  //   switch (tabIndex) {
-  //     case 0:
-  //       _navigatorKey.currentState?.pushReplacementNamed("Beranda");
-  //       break;
-  //     case 1:
-  //       _navigatorKey.currentState?.pushReplacementNamed("Kelas");
-  //       break;
-  //     case 2:
-  //       _navigatorKey.currentState?.pushReplacementNamed("Jadwal");
-  //       break;
-  //     case 3:
-  //       _navigatorKey.currentState?.pushReplacementNamed("Profil");
-  //       break;
-  //   }
-  //   setState(() {
-  //     _currentTabIndex = tabIndex;
-  //   });
-  // }
-
-  // Route<dynamic> generateRoute(RouteSettings settings) {
-  //   switch (settings.name) {
-  //     case "Beranda":
-  //       return MaterialPageRoute(builder: (context) => HomeScreen());
-  //     case "Kelas":
-  //       return MaterialPageRoute(
-  //           builder: (context) => Container(
-  //               color: Colors.green, child: Center(child: Text("Settings"))));
-  //     case "Jadwal":
-  //       return MaterialPageRoute(
-  //           builder: (context) => Container(
-  //               color: Colors.green, child: Center(child: Text("Settings"))));
-  //     default:
-  //       return MaterialPageRoute(builder: (context) => ProfileScreen());
-  //   }
-  // }
 }

@@ -1,7 +1,7 @@
-import 'package:e_learning_smk_pi/screens/homescreen/homescreen.dart';
-import 'package:e_learning_smk_pi/screens/jadwal/jadwal_screen.dart';
-import 'package:e_learning_smk_pi/screens/kelas/kelas_screen.dart';
-import 'package:e_learning_smk_pi/screens/profile/profile_screen.dart';
+import 'package:e_learning_smk_pi/screens/murid/homescreen/homescreen.dart';
+import 'package:e_learning_smk_pi/screens/murid/jadwal/jadwal_screen.dart';
+import 'package:e_learning_smk_pi/screens/murid/kelas/kelas_screen.dart';
+import 'package:e_learning_smk_pi/screens/murid/profile/profile_screen.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -51,12 +51,10 @@ class _NavbarState extends State<Navbar> {
             type: BottomNavigationBarType.fixed,
             selectedItemColor: const Color(0xFF17D6E2),
             unselectedItemColor: Colors.white,
-            // selectedLabelStyle: font10w6w,
-            // unselectedFontSize: ,
             unselectedIconTheme: const IconThemeData(color: Colors.white),
             selectedIconTheme: const IconThemeData(
               color: Color(0xFF17D6E2),
-              size: 24.0,
+              size: 20.0,
             ),
             iconSize: 20.0,
             currentIndex: selectIndex,
@@ -70,7 +68,7 @@ class _NavbarState extends State<Navbar> {
                 icon: SvgPicture.asset(
                   iconHome,
                   height: 30,
-                  // color: Get.theme.bottomNavigationBarTheme.unselectedItemColor,
+                  color: Colors.white,
                 ),
                 label: 'Beranda',
               ),
@@ -78,6 +76,7 @@ class _NavbarState extends State<Navbar> {
                 icon: SvgPicture.asset(
                   iconKelas,
                   height: 30,
+                  color: Colors.white,
                 ),
                 label: 'Kelas',
               ),
@@ -85,6 +84,7 @@ class _NavbarState extends State<Navbar> {
                 icon: SvgPicture.asset(
                   iconCalendar,
                   height: 30,
+                  color: Colors.white,
                 ),
                 label: 'Jadwal',
               ),
@@ -92,6 +92,7 @@ class _NavbarState extends State<Navbar> {
                 icon: SvgPicture.asset(
                   iconPerson,
                   height: 30,
+                  color: Colors.white,
                 ),
                 label: 'Profil',
               ),

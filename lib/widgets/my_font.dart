@@ -28,6 +28,13 @@ const textEkskul = TextStyle(
   color: Colors.white,
 );
 
+const font19w6 = TextStyle(
+  color: Colors.black,
+  // fontFamily: 'Outfit',
+  fontSize: 19,
+  fontWeight: FontWeight.w600,
+);
+
 const font20w6 = TextStyle(
   color: Colors.white,
   // fontFamily: 'Outfit',
@@ -39,6 +46,13 @@ const font20w6b = TextStyle(
   fontFamily: 'Outfit',
   fontSize: 20,
   fontWeight: FontWeight.w600,
+);
+
+const font22w7b = TextStyle(
+  fontFamily: 'Outfit',
+  fontSize: 22,
+  fontWeight: FontWeight.w700,
+  color: Colors.black,
 );
 
 const textDrawer = TextStyle(
@@ -53,6 +67,12 @@ const font15w6 = TextStyle(
   color: Colors.black,
 );
 
+const font16w6w = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
+);
+
 const font15w6w = TextStyle(
   fontSize: 15,
   fontWeight: FontWeight.w600,
@@ -63,6 +83,12 @@ const font12w6 = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w600,
   color: Colors.black,
+);
+
+const font12w6r = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w600,
+  color: Colors.red,
 );
 
 const font12w5 = TextStyle(
@@ -93,6 +119,12 @@ const font12w6w = TextStyle(
   color: Colors.white,
 );
 
+const font13w6 = TextStyle(
+  fontSize: 13,
+  fontWeight: FontWeight.w600,
+  color: Colors.black,
+);
+
 const font11w5 = TextStyle(
   fontSize: 11,
   fontWeight: FontWeight.w500,
@@ -108,5 +140,11 @@ const font7w5 = TextStyle(
 const font30w7 = TextStyle(
   fontSize: 30,
   fontWeight: FontWeight.w700,
+  color: Colors.black,
+);
+
+const font9w4 = TextStyle(
+  fontSize: 9,
+  fontWeight: FontWeight.w400,
   color: Colors.black,
 );
