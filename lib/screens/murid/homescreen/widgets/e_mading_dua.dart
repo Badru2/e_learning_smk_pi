@@ -28,45 +28,55 @@ class EmadingDua extends StatelessWidget {
               ),
             ),
           ),
-          const ListTile(
-            dense: true,
-            visualDensity: VisualDensity(vertical: -3),
-            title: Text(
-              'Juara Lomba Paduan Suara!!',
-              style: h3,
-            ),
-          ),
-          const SizedBox(
-            child: ListTile(
-              dense: true,
-              visualDensity: VisualDensity(vertical: -4),
-              title: Text(
-                'Siswa/Siswi SMK PI Berhasil Menjuarai Lomba Paduan Suara SeJawa Barat Pada Tanggal 26/2/2023, Siswa Siswi Yang Membanggakan Ini Diberi Beasiswa Selama 3 Bulan Karena Telah Membanggakan Nama Sekolah.',
-                style: textEmading,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.04,
-            child: Align(
-              widthFactor: 3,
-              alignment: Alignment.centerLeft,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  fixedSize: const Size.fromWidth(120),
-                  backgroundColor: const Color(0xFF4681F4),
-                ),
-                onPressed: () {},
-                child: const Center(
-                  child: Text(
-                    'Baca Selengkapnya',
-                    style: textTombolEmading,
+          Container(
+            width: MediaQuery.of(context).size.width * 0.88,
+            child: Column(
+              children: [
+                const ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  dense: true,
+                  visualDensity: VisualDensity(vertical: -3),
+                  title: Text(
+                    'Juara Lomba Paduan Suara!!',
+                    style: h3,
                   ),
                 ),
-              ),
+                const SizedBox(
+                  child: ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    dense: true,
+                    visualDensity: VisualDensity(vertical: -4),
+                    title: Text(
+                      'Siswa/Siswi SMK PI Berhasil Menjuarai Lomba Paduan Suara SeJawa Barat Pada Tanggal 26/2/2023, Siswa Siswi Yang Membanggakan Ini Diberi Beasiswa Selama 3 Bulan Karena Telah Membanggakan Nama Sekolah.',
+                      style: textEmading,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.04,
+                  child: Align(
+                    widthFactor: 3,
+                    alignment: Alignment.centerLeft,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: Size.fromWidth(
+                            MediaQuery.of(context).size.width * 0.3),
+                        backgroundColor: const Color(0xFF4681F4),
+                      ),
+                      onPressed: () {},
+                      child: const Center(
+                        child: Text(
+                          'Baca Selengkapnya',
+                          style: textTombolEmading,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

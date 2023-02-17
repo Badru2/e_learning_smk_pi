@@ -15,8 +15,8 @@ class IkutKelasScreen extends StatelessWidget {
       'Jika ada kesulitan silahkan silahkan buka artikel bantuan.',
     ];
 
-    final _markDownData = data.map((x) => "- $x\n").reduce((x, y) => "$x$y");
-    print(_markDownData);
+    final markDownData = data.map((x) => "- $x\n").reduce((x, y) => "$x$y");
+    // print(markDownData);
 
     return Scaffold(
       appBar: const AppBarBack(),
@@ -97,7 +97,7 @@ class IkutKelasScreen extends StatelessWidget {
                   SizedBox(
                     height: 200,
                     child: Markdown(
-                      data: _markDownData,
+                      data: markDownData,
                     ),
                   ),
                   Container(

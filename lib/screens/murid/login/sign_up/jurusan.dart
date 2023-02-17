@@ -26,8 +26,8 @@ class _JurusanState extends State<Jurusan> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10),
-      decoration: BoxDecoration(
+      margin: const EdgeInsets.only(top: 10),
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(color: Colors.black),
         ),
@@ -39,7 +39,7 @@ class _JurusanState extends State<Jurusan> {
               border: Border.all(color: Colors.black, width: 2),
               borderRadius: BorderRadius.circular(10)),
           isExpanded: true,
-          hint: Text('Masukan Jurusan kamu', style: font10w6),
+          hint: const Text('Masukan Jurusan kamu', style: font10w6),
           items: items
               .map((item) => DropdownMenuItem<String>(
                     value: item,

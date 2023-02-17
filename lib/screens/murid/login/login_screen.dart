@@ -67,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                                         builder: (context) => const SignUp()),
                                   );
                                 },
-                                child: Text(
+                                child: const Text(
                                   'Belum Punya Akun?',
                                   style: TextStyle(
                                     fontSize: 10,

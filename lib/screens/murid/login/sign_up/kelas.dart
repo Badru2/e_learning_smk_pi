@@ -20,8 +20,8 @@ class _KelasState extends State<Kelas> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10),
-      decoration: BoxDecoration(
+      margin: const EdgeInsets.only(top: 10),
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(color: Colors.black),
         ),
@@ -33,7 +33,7 @@ class _KelasState extends State<Kelas> {
               border: Border.all(color: Colors.black, width: 2),
               borderRadius: BorderRadius.circular(10)),
           isExpanded: true,
-          hint: Text('Masukan Kelas Kamu', style: font10w6),
+          hint: const Text('Masukan Kelas Kamu', style: font10w6),
           items: items
               .map((item) => DropdownMenuItem<String>(
                     value: item,

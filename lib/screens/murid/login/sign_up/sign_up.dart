@@ -1,4 +1,5 @@
 import 'package:e_learning_smk_pi/screens/murid/login/login_screen.dart';
+import 'package:e_learning_smk_pi/screens/murid/login/sign_up/berhasil.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 
@@ -223,7 +224,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   const SizedBox(height: 40),
-                  Container(
+                  const SizedBox(
                     width: 330,
                     child: Text(
                       'Isi semua keterangan diatas sebagai data diri Anda',
@@ -231,28 +232,33 @@ class _SignUpState extends State<SignUp> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.only(top: 13, bottom: 13),
-                      backgroundColor: Color(0xFF13005A),
-                      fixedSize: Size.fromWidth(280),
+                      padding: const EdgeInsets.only(top: 13, bottom: 13),
+                      backgroundColor: const Color(0xFF13005A),
+                      fixedSize: const Size.fromWidth(280),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    onPressed: () {},
-                    child: Text(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Berhasil()),
+                      );
+                    },
+                    child: const Text(
                       'DAFTAR',
                       style: font16w6w,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.only(top: 13, bottom: 13),
-                      backgroundColor: Color(0xFF367CFF),
-                      fixedSize: Size.fromWidth(280),
+                      padding: const EdgeInsets.only(top: 13, bottom: 13),
+                      backgroundColor: const Color(0xFF367CFF),
+                      fixedSize: const Size.fromWidth(280),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -264,7 +270,7 @@ class _SignUpState extends State<SignUp> {
                             builder: (context) => const LoginScreen()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'LOG IN',
                       style: font16w6w,
                     ),

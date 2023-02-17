@@ -21,7 +21,7 @@ extension toHariTime on DateTime {
   String? toHari() {
     initializeDateFormatting();
     try {
-      return new DateFormat.EEEE('id').format(this);
+      return DateFormat.EEEE('id').format(this);
     } catch (e) {
       return null;
     }
@@ -124,7 +124,7 @@ class _KalenderJadwalState extends State<KalenderJadwal> {
                                     horizontal: 10,
                                   ),
                                   width:
-                                      MediaQuery.of(context).size.width * 0.4,
+                                      MediaQuery.of(context).size.width * 0.87,
                                   decoration: BoxDecoration(
                                       color: _buttonindex == 0
                                           ? const Color(0xFF13005A)
@@ -141,36 +141,36 @@ class _KalenderJadwalState extends State<KalenderJadwal> {
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                onTap: () {
-                                  setState(() {
-                                    _buttonindex = 1;
-                                  });
-                                },
-                                child: Container(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.4,
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 7,
-                                    horizontal: 10,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: _buttonindex == 1
-                                        ? const Color(0xFF13005A)
-                                        : const Color(0xFFD9D9D9),
-                                  ),
-                                  child: Text(
-                                    textAlign: TextAlign.center,
-                                    'Ekstrakulikuler',
-                                    style: TextStyle(
-                                        fontSize: 13,
-                                        color: _buttonindex == 1
-                                            ? Colors.white
-                                            : Colors.black),
-                                  ),
-                                ),
-                              ),
+                              // InkWell(
+                              //   onTap: () {
+                              //     setState(() {
+                              //       _buttonindex = 1;
+                              //     });
+                              //   },
+                              //   child: Container(
+                              //     width:
+                              //         MediaQuery.of(context).size.width * 0.4,
+                              //     padding: const EdgeInsets.symmetric(
+                              //       vertical: 7,
+                              //       horizontal: 10,
+                              //     ),
+                              //     decoration: BoxDecoration(
+                              //       borderRadius: BorderRadius.circular(5),
+                              //       color: _buttonindex == 1
+                              //           ? const Color(0xFF13005A)
+                              //           : const Color(0xFFD9D9D9),
+                              //     ),
+                              //     child: Text(
+                              //       textAlign: TextAlign.center,
+                              //       'Ekstrakulikuler',
+                              //       style: TextStyle(
+                              //           fontSize: 13,
+                              //           color: _buttonindex == 1
+                              //               ? Colors.white
+                              //               : Colors.black),
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),

@@ -4,12 +4,11 @@ import 'package:flutter_svg/svg.dart';
 
 class AppbarCustom extends StatelessWidget with PreferredSizeWidget {
   AppbarCustom({super.key});
-  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     var scaffoldKey = GlobalKey<ScaffoldState>();
-    key:
     scaffoldKey;
     return AppBar(
       toolbarHeight: MediaQuery.of(context).size.height * 0.5,
@@ -44,5 +43,5 @@ class AppbarCustom extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
