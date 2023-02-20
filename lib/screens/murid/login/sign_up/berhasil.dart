@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:e_learning_smk_pi/screens/murid/login/login_screen.dart';
-import 'package:e_learning_smk_pi/screens/murid/login/sign_up/sign_up.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 
