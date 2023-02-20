@@ -31,7 +31,7 @@ class _NavbarState extends State<Navbar> {
           gradient: LinearGradient(
             colors: [Color(0xFF2A39D6), Color(0xFF270A93)],
             begin: Alignment.topLeft,
-            end: Alignment.topRight,
+            end: Alignment.bottomRight,
             stops: [0.0, 0.8],
             tileMode: TileMode.clamp,
           ),
