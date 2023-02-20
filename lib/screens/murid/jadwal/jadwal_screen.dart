@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'kalender.dart';
+import 'content_jadwal.dart';
 
 class JadwalScreen extends StatefulWidget {
   const JadwalScreen({super.key});

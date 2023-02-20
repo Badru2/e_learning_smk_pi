@@ -22,6 +22,33 @@ class DataProfile extends StatelessWidget {
                 margin: const EdgeInsets.only(left: 30),
                 width: MediaQuery.of(context).size.width * 0.2,
                 child: const Text(
+                  'Email',
+                  style: font15w6,
+                ),
+              ),
+              const Text(
+                ': HilalBadru2@gmail.com',
+                style: font15w6,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width * 0.9,
+          height: 50,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: const [boxShadows],
+              borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(left: 30),
+                width: MediaQuery.of(context).size.width * 0.2,
+                child: const Text(
                   'Total Nilai',
                   style: font15w6,
                 ),

@@ -47,7 +47,7 @@ class BagianPpdbSatu extends StatelessWidget {
               ),
               const SizedBox(width: 8, height: 10),
               Container(
-                margin: EdgeInsets.only(right: 110),
+                margin: const EdgeInsets.only(right: 110),
                 child: Row(
                   children: const [
                     Icon(Icons.access_time_rounded, size: 10),

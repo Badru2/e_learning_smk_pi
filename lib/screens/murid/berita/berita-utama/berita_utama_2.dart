@@ -36,11 +36,11 @@ class BagianMadingPaskib extends StatelessWidget {
             ),
             Column(
               children: [
-                Align(
+                const Align(
                   alignment: Alignment.centerLeft,
                   child: SizedBox(
                     width: 240,
-                    child: const Text(
+                    child: Text(
                       'Siswa/i SMK Pi juara 2 lomba paskibra seBandung raya',
                       maxLines: 2,
                       style: font15w6,

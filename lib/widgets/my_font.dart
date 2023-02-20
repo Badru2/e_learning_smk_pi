@@ -16,7 +16,7 @@ const textEmading = TextStyle(
 
 const textTombolEmading = TextStyle(
   color: Color(0xFFffffff),
-  fontFamily: 'Roboto',
+  fontFamily: 'Outfit',
   fontSize: 10,
   fontWeight: FontWeight.w500,
 );
@@ -37,7 +37,14 @@ const font19w6 = TextStyle(
 
 const font20w6 = TextStyle(
   color: Colors.white,
-  // fontFamily: 'Outfit',
+  fontFamily: 'Outfit',
+  fontSize: 20,
+  fontWeight: FontWeight.w600,
+);
+
+const font20w6g = TextStyle(
+  color: Color(0xFF60D180),
+  fontFamily: 'Outfit',
   fontSize: 20,
   fontWeight: FontWeight.w600,
 );

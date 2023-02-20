@@ -103,8 +103,8 @@ class _DetailTugasState extends State<DetailTugas> {
             backgroundColor: const Color(0xFF13005A),
           ),
           onPressed: () {},
-          child: Container(
-            child: const Text(
+          child: const SizedBox(
+            child: Text(
               '+ '
               'Tambahkan Tugas Kamu',
               style: font12w6w,

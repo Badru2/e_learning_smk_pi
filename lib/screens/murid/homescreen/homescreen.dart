@@ -5,9 +5,6 @@ import 'widgets/bacamading_screen.dart';
 import 'widgets/carousel_iklan.dart';
 import 'widgets/e_mading_dua.dart';
 import 'widgets/e_mading_satu.dart';
-import 'widgets/ekskul1.dart';
-import 'widgets/ekskul2.dart';
-import 'widgets/kumpulan_tombol.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -37,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                 'Hilal Badru!',
                 style: TextStyle(
                   color: Colors.black,
-                  // fontFamily: 'Outfit',
+                  fontFamily: 'Outfit',
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 ),
@@ -48,7 +45,7 @@ class HomeScreen extends StatelessWidget {
             ),
             const CarouselHomeScreen(),
             const SizedBox(
-              height: 50,
+              height: 10,
             ),
             Container(
               margin: const EdgeInsets.only(
@@ -57,32 +54,32 @@ class HomeScreen extends StatelessWidget {
               ),
               child: Column(
                 children: const <Widget>[
-                  KumpulanTombol(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  ListTile(
-                    title: Text(
-                      'Ekstrakulikuler',
-                      style: TextStyle(
-                        fontFamily: 'Outfit',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  EkskulSatu(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  EkskulDua(),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  // KumpulanTombol(),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
+                  // ListTile(
+                  //   title: Text(
+                  //     'Ekstrakulikuler',
+                  //     style: TextStyle(
+                  //       fontFamily: 'Outfit',
+                  //       fontSize: 20,
+                  //       fontWeight: FontWeight.w800,
+                  //       color: Colors.black,
+                  //     ),
+                  //   ),
+                  // ),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
+                  // EkskulSatu(),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
+                  // EkskulDua(),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
                   ListTile(
                     title: Text(
                       'E-Mading',

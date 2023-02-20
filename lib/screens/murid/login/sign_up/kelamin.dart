@@ -17,8 +17,8 @@ class _JenisKelaminState extends State<JenisKelamin> {
           activeColor: Colors.black,
           contentPadding: EdgeInsets.zero,
           dense: true,
-          visualDensity: VisualDensity(horizontal: -4, vertical: -4),
-          title: Text("Laki-Laki"),
+          visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
+          title: const Text("Laki-Laki"),
           value: "Laki-Laki",
           groupValue: kelamin,
           onChanged: (value) {
@@ -31,8 +31,8 @@ class _JenisKelaminState extends State<JenisKelamin> {
           activeColor: Colors.black,
           contentPadding: EdgeInsets.zero,
           dense: true,
-          visualDensity: VisualDensity(horizontal: -4, vertical: -4),
-          title: Text("Perempuan"),
+          visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
+          title: const Text("Perempuan"),
           value: "Perempuan",
           groupValue: kelamin,
           onChanged: (value) {

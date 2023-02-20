@@ -45,9 +45,9 @@ class BeritaPadus extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
-                margin: EdgeInsets.only(right: 110),
+                margin: const EdgeInsets.only(right: 110),
                 child: Row(
                   children: const <Widget>[
                     Icon(
