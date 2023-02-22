@@ -1,13 +1,34 @@
 import 'package:e_learning_smk_pi/widgets/my_border.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../login/login_screen.dart';
 
-class LogOutProfile extends StatelessWidget {
+class LogOutProfile extends StatefulWidget {
   const LogOutProfile({super.key});
 
   @override
+  State<LogOutProfile> createState() => _LogOutProfileState();
+}
+
+class _LogOutProfileState extends State<LogOutProfile> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
+    return
+        //  Container(
+        //   child: showDialog(
+        //     context: context,
+        //     builder: (context) => AlertDialog(
+        //       title: Text('LogOut'),
+        //       actions: <Widget>[
+        //         ElevatedButton(
+        //           onPressed: () {},
+        //           child: Text('LogOut'),
+        //         )
+        //       ],
+        //     ),
+        //   ),
+        // );
+        Container(
       decoration: const BoxDecoration(boxShadow: [boxShadows]),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
@@ -25,12 +46,7 @@ class LogOutProfile extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const LoginScreen()),
-          );
-        },
+        onPressed: () => FirebaseAuth.instance.signOut(),
       ),
     );
   }

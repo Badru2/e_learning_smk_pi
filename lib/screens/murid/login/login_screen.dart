@@ -1,13 +1,35 @@
-import 'package:e_learning_smk_pi/screens/murid/login/sign_in/button_submit.dart';
+import 'package:e_learning_smk_pi/main.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_in/circle.dart';
-import 'package:e_learning_smk_pi/screens/murid/login/sign_in/passwordlogin.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_in/text_atas_e-learning.dart';
-import 'package:e_learning_smk_pi/screens/murid/login/sign_in/usernamelogin.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/sign_up.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  var _sembunyi = true;
+
+  void iniState() {
+    super.initState();
+  }
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,11 +74,53 @@ class LoginScreen extends StatelessWidget {
                           const SizedBox(
                             height: 45.0,
                           ),
-                          const UserNameLogin(),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width,
+                            child: TextFormField(
+                              controller: emailController,
+                              // keyboardType: TextInputType.number,
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  // borderSide: const BorderSide(width: 10),
+                                ),
+                                hintText: 'Masukan Email',
+                                hintStyle: GoogleFonts.outfit(
+                                  // fontFamily: "Outfit",
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ),
                           const SizedBox(
                             height: 34,
                           ),
-                          const Password1(),
+                          Column(
+                            children: [
+                              TextFormField(
+                                controller: passwordController,
+                                obscureText: _sembunyi,
+                                onChanged: ((value) {}),
+                                obscuringCharacter: "*",
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10)),
+                                  hintText: 'Password',
+                                  suffixIcon: IconButton(
+                                    icon: _sembunyi
+                                        ? const Icon(Icons.visibility)
+                                        : const Icon(Icons.visibility_off),
+                                    onPressed: () {
+                                      setState(() {
+                                        _sembunyi = !_sembunyi;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                           Container(
                             alignment: Alignment.centerLeft,
                             child: TextButton(
@@ -78,7 +142,25 @@ class LoginScreen extends StatelessWidget {
                           const SizedBox(
                             height: 10,
                           ),
-                          const ButtonSubmitLogin(),
+                          ElevatedButton(
+                            style: const ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                Color(0xFF13005A),
+                              ),
+                            ),
+                            onPressed: signIn,
+                            child: const Center(
+                              child: Text(
+                                'LOGIN',
+                                style: TextStyle(
+                                  color: Color(0xFFffffff),
+                                  fontFamily: 'SemiBold',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -91,4 +173,25 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
+  Future signIn() async {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
+
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text.trim(),
+      );
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
+  }
+  // Navigator.of(context) not working!
 }
