@@ -28,7 +28,7 @@ class EmadingDua extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width * 0.88,
             child: Column(
               children: [

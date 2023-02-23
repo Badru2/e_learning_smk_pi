@@ -21,6 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   final emailController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
   final passwordController = TextEditingController();
 
   @override
@@ -62,106 +63,132 @@ class _LoginScreenState extends State<LoginScreen> {
                   Center(
                     child: FractionallySizedBox(
                       widthFactor: 0.7,
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            child: Image.asset('assets/image/image 1.png'),
-                          ),
-                          const SizedBox(
-                            height: 28,
-                          ),
-                          const TextAtasLogin(),
-                          const SizedBox(
-                            height: 45.0,
-                          ),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width,
-                            child: TextFormField(
-                              controller: emailController,
-                              // keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  // borderSide: const BorderSide(width: 10),
-                                ),
-                                hintText: 'Masukan Email',
-                                hintStyle: GoogleFonts.outfit(
-                                  // fontFamily: "Outfit",
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 16,
-                                ),
-                              ),
+                      child: Form(
+                        key: formKey,
+                        child: Column(
+                          children: <Widget>[
+                            SizedBox(
+                              child: Image.asset('assets/image/image 1.png'),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 34,
-                          ),
-                          Column(
-                            children: [
-                              TextFormField(
-                                controller: passwordController,
-                                obscureText: _sembunyi,
-                                onChanged: ((value) {}),
-                                obscuringCharacter: "*",
+                            const SizedBox(
+                              height: 28,
+                            ),
+                            const TextAtasLogin(),
+                            const SizedBox(
+                              height: 45.0,
+                            ),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width,
+                              child: TextFormField(
+                                autovalidateMode:
+                                    AutovalidateMode.onUserInteraction,
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return "Masukan Email";
+                                  }
+                                },
+                                textInputAction: TextInputAction.next,
+                                cursorColor: Colors.black,
+                                controller: emailController,
+                                keyboardType: TextInputType.emailAddress,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10)),
-                                  hintText: 'Password',
-                                  suffixIcon: IconButton(
-                                    icon: _sembunyi
-                                        ? const Icon(Icons.visibility)
-                                        : const Icon(Icons.visibility_off),
-                                    onPressed: () {
-                                      setState(() {
-                                        _sembunyi = !_sembunyi;
-                                      });
-                                    },
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    borderSide: BorderSide(color: Colors.black),
                                   ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            child: TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const SignUp()),
-                                  );
-                                },
-                                child: const Text(
-                                  'Belum Punya Akun?',
-                                  style: TextStyle(
-                                    fontSize: 10,
+                                  hintText: 'Masukan Email',
+                                  hintStyle: GoogleFonts.outfit(
+                                    // fontFamily: "Outfit",
                                     fontWeight: FontWeight.w400,
+                                    fontSize: 16,
                                   ),
-                                )),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          ElevatedButton(
-                            style: const ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(
-                                Color(0xFF13005A),
-                              ),
-                            ),
-                            onPressed: signIn,
-                            child: const Center(
-                              child: Text(
-                                'LOGIN',
-                                style: TextStyle(
-                                  color: Color(0xFFffffff),
-                                  fontFamily: 'SemiBold',
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(
+                              height: 34,
+                            ),
+                            TextFormField(
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
+                              // validator: (value) =>
+                              //     value != null && value.length < 6
+                              //         ? 'Minimal 6 Karakter'
+                              //         : null,
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return "Masukan Password";
+                                } else if (value.length < 6) {
+                                  return "Minimal 6 Karakter";
+                                }
+                              },
+                              textInputAction: TextInputAction.go,
+                              controller: passwordController,
+                              obscureText: _sembunyi,
+                              onChanged: ((value) {}),
+                              obscuringCharacter: "*",
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                hintText: 'Password',
+                                suffixIcon: IconButton(
+                                  icon: _sembunyi
+                                      ? const Icon(Icons.visibility)
+                                      : const Icon(Icons.visibility_off),
+                                  onPressed: () {
+                                    setState(() {
+                                      _sembunyi = !_sembunyi;
+                                    });
+                                  },
+                                ),
+                              ),
+                            ),
+                            Container(
+                              alignment: Alignment.centerLeft,
+                              child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => const SignUp()),
+                                    );
+                                  },
+                                  child: const Text(
+                                    'Belum Punya Akun?',
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  )),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFF13005A),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                              onPressed: signIn,
+                              child: const Center(
+                                child: Padding(
+                                  padding: EdgeInsets.all(13.0),
+                                  child: Text(
+                                    'LOGIN',
+                                    style: TextStyle(
+                                      color: Color(0xFFffffff),
+                                      fontFamily: 'SemiBold',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -175,10 +202,13 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Future signIn() async {
+    final isValid = formKey.currentState!.validate();
+    if (!isValid) return;
+
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => Center(
+      builder: (context) => const Center(
         child: CircularProgressIndicator(),
       ),
     );
@@ -191,7 +221,7 @@ class _LoginScreenState extends State<LoginScreen> {
     } on FirebaseAuthException catch (e) {
       print(e);
     }
+
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
-  // Navigator.of(context) not working!
 }

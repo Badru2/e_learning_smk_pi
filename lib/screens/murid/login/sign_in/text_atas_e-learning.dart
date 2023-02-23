@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,17 +24,19 @@ class TextAtasLogin extends StatelessWidget {
         const SizedBox(
           height: 23,
         ),
+        const Text('SELAMAT DATANG DI E-LEARNING SMK PI', style: font13w6),
         const SizedBox(
-          width: 290,
+          // width: 290,
           // height: 69,
           child: Text(
-            'Selamat datang di E-Learning SMK PI, silah kan masukan nomor siswa dan password yang telah diberikan untuk login ',
+            'Silahkan masukan nomor siswa dan password yang telah diberikan untuk login ',
             style: TextStyle(
               fontFamily: "Outfit",
               fontSize: 14.0,
               fontWeight: FontWeight.w400,
               color: Colors.black,
             ),
+            textAlign: TextAlign.center,
           ),
         )
       ],

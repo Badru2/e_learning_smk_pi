@@ -105,6 +105,7 @@ const font12w5 = TextStyle(
 );
 
 const font10w5 = TextStyle(
+  color: Colors.black,
   fontSize: 10,
   fontWeight: FontWeight.w500,
 );

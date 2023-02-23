@@ -1,4 +1,3 @@
-import 'package:e_learning_smk_pi/screens/murid/homescreen/homescreen.dart';
 import 'package:e_learning_smk_pi/widgets/navbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,7 +9,7 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -27,13 +26,13 @@ class MyApp extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            return Center(child: Text('Ada yang salah'));
+            return const Center(child: Text('Ada yang salah'));
           } else if (snapshot.hasData) {
-            return Navbar();
+            return const Navbar();
           } else {
-            return LoginScreen();
+            return const LoginScreen();
           }
         },
       ),
