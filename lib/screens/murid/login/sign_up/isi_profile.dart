@@ -104,20 +104,20 @@ class _SIsiProfiletate extends State<IsiProfile> {
                   const SizedBox(height: 20),
 
                   // Jurusan
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: const Text('Jurusan', style: font20w6b),
-                  ),
-                  const Jurusan(),
-                  const SizedBox(height: 20),
+                  // Container(
+                  //   alignment: Alignment.centerLeft,
+                  //   child: const Text('Jurusan', style: font20w6b),
+                  // ),
+                  // const Jurusan(),
+                  // const SizedBox(height: 20),
 
                   // Kelas
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: const Text('Kelas', style: font20w6b),
-                  ),
-                  const Kelas(),
-                  const SizedBox(height: 20),
+                  // Container(
+                  //   alignment: Alignment.centerLeft,
+                  //   child: const Text('Kelas', style: font20w6b),
+                  // ),
+                  // const Kelas(),
+                  // const SizedBox(height: 20),
 
                   // Alamat Lengkap
                   Container(
@@ -264,11 +264,11 @@ class _SIsiProfiletate extends State<IsiProfile> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginScreen()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => const LoginScreen()),
+                      // );
                     },
                     child: const Text(
                       'LOG IN',

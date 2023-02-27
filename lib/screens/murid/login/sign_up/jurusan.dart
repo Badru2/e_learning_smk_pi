@@ -26,17 +26,22 @@ class _JurusanState extends State<Jurusan> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.fromLTRB(0, 13, 10, 13),
       margin: const EdgeInsets.only(top: 10),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
         border: Border(
           bottom: BorderSide(color: Colors.black),
+          top: BorderSide(color: Colors.black),
+          left: BorderSide(color: Colors.black),
+          right: BorderSide(color: Colors.black),
         ),
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton2(
           barrierColor: Colors.grey.withOpacity(0.5),
           dropdownDecoration: BoxDecoration(
-              border: Border.all(color: Colors.black, width: 2),
+              border: Border.all(color: Colors.black, width: 1),
               borderRadius: BorderRadius.circular(10)),
           isExpanded: true,
           hint: const Text('Masukan Jurusan kamu', style: font10w6),

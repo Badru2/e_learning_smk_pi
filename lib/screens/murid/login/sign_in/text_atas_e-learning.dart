@@ -13,13 +13,15 @@ class TextAtasLogin extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.4,
           // height: 71,
           alignment: Alignment.center,
-          child: Text('E-LEARNING SMK PI',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.outfit(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                color: Colors.black,
-              )),
+          child: Text(
+            'E-LEARNING SMK PI',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.outfit(
+              fontSize: 22,
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+            ),
+          ),
         ),
         const SizedBox(
           height: 23,
@@ -29,7 +31,7 @@ class TextAtasLogin extends StatelessWidget {
           // width: 290,
           // height: 69,
           child: Text(
-            'Silahkan masukan nomor siswa dan password yang telah diberikan untuk login ',
+            'Silahkan masukan e-mail dan password yang telah diberikan untuk login ',
             style: TextStyle(
               fontFamily: "Outfit",
               fontSize: 14.0,

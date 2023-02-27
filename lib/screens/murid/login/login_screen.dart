@@ -3,11 +3,17 @@ import 'package:e_learning_smk_pi/screens/murid/login/sign_in/circle.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_in/text_atas_e-learning.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/sign_up.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  final VoidCallback onClickedSignUp;
+
+  const LoginScreen({
+    Key? key,
+    required this.onClickedSignUp,
+  }) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -96,8 +102,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     borderRadius: BorderRadius.circular(8.0),
                                     borderSide: BorderSide(color: Colors.black),
                                   ),
-                                  hintText: 'Masukan Email',
-                                  hintStyle: GoogleFonts.outfit(
+                                  labelText: 'Masukan Email',
+                                  labelStyle: GoogleFonts.outfit(
                                     // fontFamily: "Outfit",
                                     fontWeight: FontWeight.w400,
                                     fontSize: 16,
@@ -130,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(10)),
-                                hintText: 'Password',
+                                labelText: 'Password',
                                 suffixIcon: IconButton(
                                   icon: _sembunyi
                                       ? const Icon(Icons.visibility)
@@ -143,26 +149,41 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
+                            // Container(
+                            //   alignment: Alignment.centerLeft,
+                            //   child: TextButton(
+                            //     onPressed: () {
+                            //       Navigator.push(
+                            //         context,
+                            //         MaterialPageRoute(
+                            //             builder: (context) => const SignUp()),
+                            //       );
+                            //     },
+                            //     child: const Text(
+                            //       'Belum Punya Akun?',
+                            //       style: TextStyle(
+                            //         fontSize: 10,
+                            //         fontWeight: FontWeight.w400,
+                            //       ),
+                            //     ),
+                            //   ),
+                            // ),
                             Container(
+                              margin: EdgeInsets.only(top: 10, left: 5),
                               alignment: Alignment.centerLeft,
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const SignUp()),
-                                    );
-                                  },
-                                  child: const Text(
-                                    'Belum Punya Akun?',
-                                    style: TextStyle(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  )),
+                              child: RichText(
+                                  text: TextSpan(
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = widget.onClickedSignUp,
+                                      text: 'Belum Punya Akun?',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.blue,
+                                      ))),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 30,
                             ),
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(

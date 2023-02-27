@@ -98,6 +98,12 @@ const font12w6r = TextStyle(
   color: Colors.red,
 );
 
+const font16w4 = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  fontFamily: 'Outfit',
+);
+
 const font12w5 = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w500,
