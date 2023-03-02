@@ -42,34 +42,28 @@ class _DetailTugasTextState extends State<DetailTugasText> {
       body: Stack(
         children: [
           Positioned(
-            top: 0,
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.95,
-              height: MediaQuery.of(context).size.height * 0.3,
-              child: Column(
-                children: const <Widget>[
-                  ListTile(
-                    title: Text(
-                      'Catatan :',
-                      style: font20w6b,
+              top: 0,
+              child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  child: Column(children: const <Widget>[
+                    ListTile(
+                      title: Text(
+                        'Catatan :',
+                        style: font20w6b,
+                      ),
                     ),
-                  ),
-                  ListTile(
-                    title: Text(
+                    ListTile(
+                        title: Text(
                       'Silahkan pelajari dan tulis dibuku cataan kalian masing-masing materi berikut,pembahasanya akan disampaikan dalam pembelajaran tatap muka di kampus 2 nanti.',
                       style: font12w5,
-                    ),
-                  ),
-                  ListTile(
-                    title: Text(
+                    )),
+                    ListTile(
+                        title: Text(
                       'Tugas :',
                       style: font20w6b,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+                    ))
+                  ])))
         ],
       ),
     );
@@ -111,32 +105,26 @@ class _DetailTugasState extends State<DetailTugas> {
         color: Colors.white,
         padding: const EdgeInsets.fromLTRB(25, 0, 25, 20),
         child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            alignment: Alignment.center,
-            fixedSize: Size(
-              MediaQuery.of(context).size.width * 0.9,
-              MediaQuery.of(context).size.height * 0.06,
+            style: ElevatedButton.styleFrom(
+              alignment: Alignment.center,
+              fixedSize: Size(MediaQuery.of(context).size.width * 0.9,
+                  MediaQuery.of(context).size.height * 0.06),
+              backgroundColor: const Color(0xFF13005A),
             ),
-            backgroundColor: const Color(0xFF13005A),
-          ),
-          onPressed: () {
-            getMultipImage();
-          },
-          child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(Icons.add),
-                Center(
-                  child: Text(
+            onPressed: () {
+              getMultipImage();
+            },
+            child: Center(
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                  Icon(Icons.add),
+                  Center(
+                      child: Text(
                     ' Tambahkan Tugas Kamu',
                     style: font12w6w,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+                  ))
+                ]))),
       );
 
   Widget buttonPanel() => Container(
@@ -148,105 +136,88 @@ class _DetailTugasState extends State<DetailTugas> {
               margin: const EdgeInsets.fromLTRB(25, 0, 25, 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  alignment: Alignment.center,
-                  fixedSize: Size(
-                    MediaQuery.of(context).size.width * 0.9,
-                    MediaQuery.of(context).size.height * 0.06,
-                  ),
-                  backgroundColor: const Color(0xFF13005A),
-                ),
+                    alignment: Alignment.center,
+                    fixedSize: Size(MediaQuery.of(context).size.width * 0.9,
+                        MediaQuery.of(context).size.height * 0.06),
+                    backgroundColor: const Color(0xFF13005A)),
                 onPressed: () {
                   getMultipImage();
                 },
                 child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
                       Icon(Icons.add),
                       Center(
-                        child: Text(
-                          ' Tambahkan Tugas Kamu',
-                          style: font12w6w,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                          child: Text(
+                        ' Tambahkan Tugas Kamu',
+                        style: font12w6w,
+                      ))
+                    ])),
               ),
             ),
             Container(
-              margin: const EdgeInsets.fromLTRB(25, 0, 25, 20),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  alignment: Alignment.center,
-                  fixedSize: Size(
-                    MediaQuery.of(context).size.width * 0.9,
-                    MediaQuery.of(context).size.height * 0.06,
-                  ),
-                  backgroundColor: const Color(0xFF0066FF),
-                ),
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: const Center(
-                        child: Text(
-                          'Yakin Dek?',
-                          style: font12w5,
-                        ),
-                      ),
-                      // actionsPadding: EdgeInsets.zero,
-                      titlePadding: const EdgeInsets.only(top: 10, bottom: 20),
-                      insetPadding: EdgeInsets.zero,
-                      actionsAlignment: MainAxisAlignment.spaceAround,
-                      actions: [
-                        TextButton(
-                          style: const ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(
-                              Color(0xFFFF0000),
-                            ),
-                          ),
-                          onPressed: () => Navigator.pop(context),
-                          child: const Text(
-                            'Tidak',
-                            style: font12w5,
-                          ),
-                        ),
-                        TextButton(
-                          style: const ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(
-                              Color(0xFF00FF38),
-                            ),
-                          ),
-                          onPressed: () async {
-                            Navigator.pop(context);
-                            for (int i = 0; i < images.length; i++) {
-                              String url = await uploadFile(images[i]);
-                            }
-                          },
-                          child: const Text(
-                            'Iya',
-                            style: font12w5,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(Icons.send),
-                    SizedBox(
-                      child: Text(
-                        '   Kirim Tugas',
-                        style: font12w6w,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+                margin: const EdgeInsets.fromLTRB(25, 0, 25, 20),
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        alignment: Alignment.center,
+                        fixedSize: Size(MediaQuery.of(context).size.width * 0.9,
+                            MediaQuery.of(context).size.height * 0.06),
+                        backgroundColor: const Color(0xFF0066FF)),
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                            title: const Center(
+                                child: Text(
+                                    'Apakah Anda Ingin Kirim Tugas Ini?',
+                                    style: font12w5)),
+                            titlePadding:
+                                const EdgeInsets.only(top: 10, bottom: 20),
+                            insetPadding: EdgeInsets.zero,
+                            actionsAlignment: MainAxisAlignment.spaceAround,
+                            actions: [
+                              TextButton(
+                                style: const ButtonStyle(
+                                  backgroundColor: MaterialStatePropertyAll(
+                                    Color(0xFFFF0000),
+                                  ),
+                                ),
+                                onPressed: () => Navigator.pop(context),
+                                child: const Text(
+                                  'Tidak',
+                                  style: font12w5,
+                                ),
+                              ),
+                              TextButton(
+                                  style: const ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll(
+                                      Color(0xFF00FF38),
+                                    ),
+                                  ),
+                                  onPressed: () async {
+                                    Navigator.pop(context);
+                                    for (int i = 0; i < images.length; i++) {
+                                      String url = await uploadFile(images[i]);
+                                    }
+                                  },
+                                  child: const Text(
+                                    'Iya',
+                                    style: font12w5,
+                                  ))
+                            ]),
+                      );
+                    },
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.send),
+                          SizedBox(
+                              child: Text(
+                            '   Kirim Tugas',
+                            style: font12w6w,
+                          ))
+                        ]))),
           ],
         ),
       );
@@ -307,112 +278,99 @@ class _PanelWidgetState extends State<PanelWidget> {
         children: <Widget>[
           const SizedBox(height: 20),
           buildAboutText(),
-          // const SizedBox(height: 20),
         ],
       );
 
   Widget buildAboutText() => Container(
-        // height: 500,
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: SizedBox(
-          // height: 400,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          buildDragHandle(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              buildDragHandle(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    'Tugas Kamu',
-                    style: font19w6,
-                  ),
-                  Column(
-                    children: <Widget>[
-                      const Text(
-                        'Akhir Pengerjaan:',
-                        style: font12w6,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(right: 35),
-                        child: const Text(
-                          '20-20-2023',
-                          style: font12w6r,
-                        ),
-                      ),
-                    ],
-                  )
-                ],
+              const Text(
+                'Tugas Kamu',
+                style: font19w6,
               ),
-              const SizedBox(height: 20),
-              Container(
-                child: images.isEmpty
-                    ? SingleChildScrollView(child: tugasKosong())
-                    : SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.2,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (ctx, i) {
-                            return Column(
-                              children: [
-                                GestureDetector(
+              Column(
+                children: <Widget>[
+                  const Text(
+                    'Akhir Pengerjaan:',
+                    style: font12w6,
+                  ),
+                  Container(
+                      margin: const EdgeInsets.only(right: 35),
+                      child: const Text(
+                        '20-20-2023',
+                        style: font12w6r,
+                      ))
+                ],
+              )
+            ],
+          ),
+          const SizedBox(height: 20),
+          Container(
+              child: images.isEmpty
+                  ? SingleChildScrollView(child: tugasKosong())
+                  : SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (ctx, i) {
+                          return Column(
+                            children: [
+                              GestureDetector(
                                   onTap: () async {
                                     await showDialog(
-                                      context: context,
-                                      builder: (_) => Dialog(
-                                        child: SizedBox(
-                                          child: Image.file(images[i]),
-                                        ),
-                                      ),
-                                    );
+                                        context: context,
+                                        builder: (_) => Dialog(
+                                                child: SizedBox(
+                                              child: Image.file(images[i]),
+                                            )));
                                   },
                                   child: Container(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.3,
-                                    margin: const EdgeInsets.only(right: 10),
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Colors.black,
-                                        width: 2,
-                                      ),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(7),
-                                      child: Image.file(
-                                        images[i],
-                                        height: 100,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Row(
-                                  children: [
-                                    const SizedBox(
-                                      child: Icon(
-                                        Icons.image,
-                                        color: Colors.red,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    SizedBox(
                                       width: MediaQuery.of(context).size.width *
-                                          0.18,
-                                      child: Text(
-                                        images[i].path.split('/').last,
+                                          0.3,
+                                      margin: const EdgeInsets.only(right: 10),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width: 2,
+                                        ),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(7),
+                                          child: Image.file(
+                                            images[i],
+                                            height: 100,
+                                            fit: BoxFit.cover,
+                                          )))),
+                              Row(children: [
+                                const SizedBox(
+                                    child: Icon(
+                                  Icons.image,
+                                  color: Colors.red,
+                                )),
+                                const SizedBox(width: 5),
+                                SizedBox(
+                                    width: MediaQuery.of(context).size.width *
+                                        0.18,
+                                    child: Text(images[i].path.split('/').last,
                                         maxLines: 2,
                                         style: const TextStyle(
                                           fontSize: 9,
                                           fontFamily: 'Roboto',
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.1,
-                                      child: TextButton(
+                                        ))),
+                                SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.1,
+                                    child: TextButton(
                                         onPressed: () {
+                                          // Delete(snapshot.images[snapshot.images.lenght - i - 1].entry),
                                           setState(() {
                                             images.removeAt(i);
                                           });
@@ -420,64 +378,50 @@ class _PanelWidgetState extends State<PanelWidget> {
                                         child: const Icon(
                                           Icons.close,
                                           color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            );
-                          },
-                          itemCount: images.length,
-                        ),
-                      ),
-              ),
-              const SizedBox(
-                height: 70,
-              ),
-            ],
-          ),
-        ),
+                                        )))
+                              ]),
+                            ],
+                          );
+                        },
+                        itemCount: images.length,
+                      ))),
+          const SizedBox(
+            height: 70,
+          )
+        ])),
       );
 
   Widget tugasKosong() => SizedBox(
-        // height: 100,
         child: Column(
           children: [
             const Align(
                 alignment: Alignment.centerLeft, child: Text('Lampiran tugas')),
             const SizedBox(height: 10),
             Center(
-              child: Column(
-                children: [
-                  SizedBox(
-                    child: SvgPicture.asset(iconBookCancel, height: 120),
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    'Kamu belum Mengumpulkan tugas ini.',
-                    style: font10w5,
-                  ),
-                ],
+                child: Column(children: [
+              SizedBox(
+                child: SvgPicture.asset(iconBookCancel, height: 120),
               ),
-            ),
+              const SizedBox(height: 10),
+              const Text(
+                'Kamu belum Mengumpulkan tugas ini.',
+                style: font10w5,
+              )
+            ]))
           ],
         ),
       );
 
   Widget buildDragHandle() => GestureDetector(
-        onTap: togglePanel,
-        child: Center(
+      onTap: togglePanel,
+      child: Center(
           child: Container(
-            width: 100,
-            height: 3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
-              color: Colors.black,
-            ),
-          ),
-        ),
-      );
+              width: 100,
+              height: 3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: Colors.black,
+              ))));
 
   togglePanel() => widget.panelController.isPanelOpen
       ? widget.panelController.close()

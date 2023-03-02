@@ -1,18 +1,13 @@
 import 'package:e_learning_smk_pi/main.dart';
+import 'package:e_learning_smk_pi/screens/murid/login/login_screen.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/jurusan.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/kelas.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
-  final VoidCallback onClickedSignIn;
-
-  const SignUp({
-    Key? key,
-    required this.onClickedSignIn,
-  }) : super(key: key);
+  const SignUp({super.key});
 
   @override
   State<SignUp> createState() => _SignUpState();
@@ -134,41 +129,41 @@ class _SignUpState extends State<SignUp> {
                     const Jurusan(),
                     const SizedBox(height: 10),
                     const Kelas(),
-                    // Container(
-                    //   alignment: Alignment.centerLeft,
-                    //   child: TextButton(
-                    //     onPressed: () {
-                    //       Navigator.push(
-                    //         context,
-                    //         MaterialPageRoute(
-                    //             builder: (context) => const LoginScreen()),
-                    //       );
-                    //     },
-                    //     child: const Text(
-                    //       'Sudah Punya Akun?',
-                    //       style: TextStyle(
-                    //         fontSize: 10,
-                    //         fontWeight: FontWeight.w400,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
-
                     Container(
-                      margin: const EdgeInsets.only(top: 10, left: 5),
                       alignment: Alignment.centerLeft,
-                      child: RichText(
-                        text: TextSpan(
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = widget.onClickedSignIn,
-                            text: 'Sudah Punya Akun?',
-                            style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.blue,
-                            )),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
+                          );
+                        },
+                        child: const Text(
+                          'Sudah Punya Akun?',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                       ),
                     ),
+
+                    // Container(
+                    //   margin: const EdgeInsets.only(top: 10, left: 5),
+                    //   alignment: Alignment.centerLeft,
+                    //   child: RichText(
+                    //     text: TextSpan(
+                    //         recognizer: TapGestureRecognizer()
+                    //           ..onTap = widget.onClickedSignIn,
+                    //         text: 'Sudah Punya Akun?',
+                    //         style: const TextStyle(
+                    //           fontSize: 12,
+                    //           fontWeight: FontWeight.w400,
+                    //           color: Colors.blue,
+                    //         )),
+                    //   ),
+                    // ),
                     const SizedBox(height: 30),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(

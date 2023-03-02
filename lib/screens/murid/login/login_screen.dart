@@ -8,12 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
-  final VoidCallback onClickedSignUp;
-
-  const LoginScreen({
-    Key? key,
-    required this.onClickedSignUp,
-  }) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -149,39 +144,41 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
+                            Container(
+                              alignment: Alignment.centerLeft,
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const SignUp()),
+                                  );
+                                },
+                                child: const Text(
+                                  'Belum Punya Akun?',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                            ),
                             // Container(
+                            //   margin: EdgeInsets.only(top: 10, left: 5),
                             //   alignment: Alignment.centerLeft,
-                            //   child: TextButton(
-                            //     onPressed: () {
-                            //       Navigator.push(
-                            //         context,
-                            //         MaterialPageRoute(
-                            //             builder: (context) => const SignUp()),
-                            //       );
-                            //     },
-                            //     child: const Text(
-                            //       'Belum Punya Akun?',
+                            //   child: RichText(
+                            //     text: TextSpan(
+                            //       recognizer: TapGestureRecognizer()
+                            //         ..onTap = widget.onClickedSignUp,
+                            //       text: 'Belum Punya Akun?',
                             //       style: TextStyle(
-                            //         fontSize: 10,
+                            //         fontSize: 12,
                             //         fontWeight: FontWeight.w400,
+                            //         color: Colors.blue,
                             //       ),
                             //     ),
                             //   ),
                             // ),
-                            Container(
-                              margin: EdgeInsets.only(top: 10, left: 5),
-                              alignment: Alignment.centerLeft,
-                              child: RichText(
-                                  text: TextSpan(
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap = widget.onClickedSignUp,
-                                      text: 'Belum Punya Akun?',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.blue,
-                                      ))),
-                            ),
                             const SizedBox(
                               height: 30,
                             ),

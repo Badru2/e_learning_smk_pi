@@ -1,4 +1,3 @@
-import 'package:e_learning_smk_pi/screens/murid/login/auth_page.dart';
 import 'package:e_learning_smk_pi/widgets/navbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
           } else if (snapshot.hasData) {
             return const Navbar();
           } else {
-            return const AuthPage();
+            return const LoginScreen();
           }
         },
       ),
