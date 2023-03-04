@@ -1,5 +1,7 @@
 import 'package:e_learning_smk_pi/screens/murid/homescreen/widgets/lapor_bug.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/isi_profile.dart';
+import 'package:e_learning_smk_pi/screens/murid/login/sign_up/test.dart';
+import 'package:e_learning_smk_pi/screens/murid/login/sign_up/testread.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +45,10 @@ class CustomDrawer extends StatelessWidget {
               'Tentang',
               style: textDrawer,
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Test()));
+            },
           ),
           ListTile(
             leading: SvgPicture.asset(iconPersonGear, height: 30),
@@ -53,7 +58,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const IsiProfile()));
+                  MaterialPageRoute(builder: (context) => const Test()));
             },
           ),
         ],

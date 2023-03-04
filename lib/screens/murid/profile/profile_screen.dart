@@ -12,6 +12,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
+          //// Panggil semua item yang sudah dibuat -->
           children: [
             const ProfileBackground(),
             Center(
@@ -57,6 +58,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
           ],
+          //// Panggil semua item yang sudah dibuat <--
         ),
       ),
       // bottomNavigationBar: const BottomNavigationBarCustom(),

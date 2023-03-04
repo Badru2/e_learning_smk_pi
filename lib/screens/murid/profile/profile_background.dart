@@ -12,6 +12,7 @@ class ProfileBackground extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.3,
           decoration: const BoxDecoration(
+              //// Background color gradient -->
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -20,6 +21,8 @@ class ProfileBackground extends StatelessWidget {
                   Color(0xFF13005A),
                 ],
               ),
+              //// Background color gradient <--
+              /// shadow -->
               boxShadow: [
                 BoxShadow(
                   offset: Offset(5.0, 5.0),
@@ -27,21 +30,27 @@ class ProfileBackground extends StatelessWidget {
                   spreadRadius: 0,
                 ),
               ],
+              //// shadow <--
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
                 bottomRight: Radius.circular(10),
               )),
         ),
+        //// Memposisikan dimana posisi lingkaran -->
         const Positioned(
           right: 0,
           top: 0,
           child: CircleProfileAtas(),
         ),
+        //// Memposisikan dimana posisi lingkaran <--
+
+        //// Memposisikan dimana posisi lingkaran -->
         const Positioned(
           left: 0,
           bottom: 0,
           child: CircleProfileBawah(),
         ),
+        //// Memposisikan dimana posisi lingkaran <--
       ],
     );
   }

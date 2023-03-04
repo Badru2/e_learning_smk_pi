@@ -9,14 +9,18 @@ class CircleProfileAtas extends StatelessWidget {
       width: 150,
       height: 150,
       child: Stack(children: [
+        //// Membuat Posisi Lingkaran jadi sedikit terpotong -->
         Positioned(
           right: -20,
           top: -20,
           child: CustomPaint(
+            // Ukuran Lingkaran
             size: const Size(130, 130),
+            // Manggil Lingkaran
             painter: Circle(),
           ),
         ),
+        //// Membuat Posisi Lingkaran jadi sedikit terpotong <--
       ]),
     );
   }
@@ -44,8 +48,10 @@ class CircleProfileBawah extends StatelessWidget {
   }
 }
 
+//// Membuat Lingkaran -->
 class Circle extends CustomPainter {
   final _paint = Paint()
+    // Warna Lingkaran
     ..color = const Color(0xFF0094FF)
     ..strokeWidth = 4
     // Use [PaintingStyle.fill] if you want the circle to be filled.
@@ -62,3 +68,4 @@ class Circle extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
+//// Membuat Lingkaran <--

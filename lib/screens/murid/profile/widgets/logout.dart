@@ -14,8 +14,10 @@ class _LogOutProfileState extends State<LogOutProfile> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // [boxShadow] bayangan yang diambil dari file "my_border.dart"
       decoration: const BoxDecoration(boxShadow: [boxShadows]),
       child: ElevatedButton(
+        //// desain tombol -->
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFFE03838),
           padding:
@@ -23,6 +25,7 @@ class _LogOutProfileState extends State<LogOutProfile> {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
+        //// desain tombol <--
         child: const Text(
           'Log Out',
           style: TextStyle(
@@ -31,52 +34,62 @@ class _LogOutProfileState extends State<LogOutProfile> {
             fontWeight: FontWeight.w600,
           ),
         ),
-        // onPressed: () => FirebaseAuth.instance.signOut(),
         onPressed: () {
+          //// Pop up alert saat tekan tombol -->
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              title: Center(
+              title: const Center(
                 child: Text(
                   'Apakah Anda Yakin Ingin Keluar?',
                   style: font12w5,
                 ),
               ),
-              // actionsPadding: EdgeInsets.zero,
-              titlePadding: EdgeInsets.only(top: 10, bottom: 20),
+              titlePadding: const EdgeInsets.only(top: 10, bottom: 20),
               insetPadding: EdgeInsets.zero,
               actionsAlignment: MainAxisAlignment.spaceAround,
               actions: [
+                //// Tombol batal -->
                 TextButton(
-                  style: ButtonStyle(
+                  style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(
                       Color(0xFFFF0000),
                     ),
                   ),
                   onPressed: () => Navigator.pop(context),
-                  child: Text(
+                  child: const Text(
                     'Tidak',
+                    // font12w5 diambil buat textStyle dari file "my_font.dart"
                     style: font12w5,
                   ),
                 ),
+                //// Tombol batal <--
+                /// Tombol Iya -->
                 TextButton(
-                  style: ButtonStyle(
+                  style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(
                       Color(0xFF00FF38),
                     ),
                   ),
+                  //// Perintah Kosong -->
+                  // onPressed: () {}
+                  //// Perintah Kosong <--
                   onPressed: () async {
+                    //// Perintah Backend buat logOut -->
                     Navigator.pop(context);
                     await FirebaseAuth.instance.signOut();
+                    //// Perintah Backend buat logOut <--
                   },
-                  child: Text(
+                  child: const Text(
                     'Iya',
                     style: font12w5,
                   ),
                 ),
+                //// Tombol Iya <--
               ],
             ),
           );
+          //// Pop up alert saat tekan tombol <--
         },
       ),
     );
