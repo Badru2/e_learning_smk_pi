@@ -16,3 +16,13 @@ const boxShadows = BoxShadow(
   blurRadius: 10.0,
   spreadRadius: 0,
 );
+
+final enabledBorderB = OutlineInputBorder(
+  borderSide: BorderSide(color: Colors.black),
+  borderRadius: BorderRadius.circular(15),
+);
+
+final focusedBorderB = OutlineInputBorder(
+  borderSide: BorderSide(color: Colors.black),
+  borderRadius: BorderRadius.circular(15),
+);

@@ -17,3 +17,5 @@ const iconPhone = 'assets/icons/phone-forwarded-rounded.svg';
 const iconWhatsApp = 'assets/icons/whatsapp.svg';
 const iconTwitter = 'assets/icons/twitter-circle-filled.svg';
 const iconBookCancel = 'assets/icons/book-cancel-outline.svg';
+const iconSiswa = 'assets/icons/Siswa.svg';
+const iconStudent = 'assets/icons/student.svg';

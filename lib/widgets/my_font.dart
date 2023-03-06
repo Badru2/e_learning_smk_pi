@@ -162,3 +162,15 @@ const font9w4 = TextStyle(
   fontWeight: FontWeight.w400,
   color: Colors.black,
 );
+
+const font35w6w = TextStyle(
+  fontSize: 35,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
+);
+
+const font50w6w = TextStyle(
+  fontSize: 50,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
+);
