@@ -63,6 +63,7 @@ dependencies:
   get: ^4.6.5
   firebase_database: ^10.0.14
   sidebarx: ^0.15.0
+  data_table_2: ^2.3.12
 
 dev_dependencies:
   flutter_test:

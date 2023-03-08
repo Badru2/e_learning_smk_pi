@@ -22,7 +22,17 @@ final enabledBorderB = OutlineInputBorder(
   borderRadius: BorderRadius.circular(15),
 );
 
+final enabledBorderB2 = OutlineInputBorder(
+  borderSide: BorderSide(color: Colors.black, width: 2),
+  borderRadius: BorderRadius.circular(15),
+);
+
 final focusedBorderB = OutlineInputBorder(
   borderSide: BorderSide(color: Colors.black),
+  borderRadius: BorderRadius.circular(15),
+);
+
+final focusedBorderB2 = OutlineInputBorder(
+  borderSide: BorderSide(color: Colors.black, width: 2),
   borderRadius: BorderRadius.circular(15),
 );

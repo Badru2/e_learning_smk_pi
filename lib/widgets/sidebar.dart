@@ -1,4 +1,5 @@
 import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
+import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 
@@ -44,7 +45,7 @@ class SideBar extends StatelessWidget {
     return SidebarX(
       controller: _controller,
       theme: SidebarXTheme(
-        margin: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+        margin: const EdgeInsets.fromLTRB(20, 10, 0, 10),
         decoration: const BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.only(
@@ -90,7 +91,7 @@ class SideBar extends StatelessWidget {
         ),
       ),
       extendedTheme: const SidebarXTheme(
-        width: 200,
+        width: 240,
         decoration: BoxDecoration(
           color: Color(0xFF13005A),
         ),
@@ -158,6 +159,8 @@ class _AllScreen extends StatelessWidget {
         switch (controller.selectedIndex) {
           case 0:
             return const HomeScreenAdmin();
+          case 5:
+            return const TambahBeritaScreen();
           default:
             return Text(
               pageTitle,

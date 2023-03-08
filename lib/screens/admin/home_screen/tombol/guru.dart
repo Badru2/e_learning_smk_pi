@@ -4,17 +4,17 @@ import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class LaporanBug extends StatelessWidget {
-  const LaporanBug({super.key});
+class Guru extends StatelessWidget {
+  const Guru({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 210,
       width: MediaQuery.of(context).size.width * 0.3,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFFD6BE44),
+            backgroundColor: const Color(0xFF400986),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20))),
         onPressed: () {
@@ -40,14 +40,14 @@ class LaporanBug extends StatelessWidget {
                     dense: false,
                     contentPadding: EdgeInsets.zero,
                     title: Text(
-                      'Laporan Bug',
+                      'Jumlah Guru',
                       style: font35w6w,
                     ),
                   ),
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text(
-                      '95 laporan',
+                      '75',
                       style: font50w6w,
                     ),
                   ),

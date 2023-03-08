@@ -1,7 +1,7 @@
-import 'package:e_learning_smk_pi/screens/admin/home_screen/belum_konfirmasi.dart';
-import 'package:e_learning_smk_pi/screens/admin/home_screen/guru.dart';
-import 'package:e_learning_smk_pi/screens/admin/home_screen/laporan_bug.dart';
-import 'package:e_learning_smk_pi/screens/admin/home_screen/siswa.dart';
+import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/belum_konfirmasi.dart';
+import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/guru.dart';
+import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/siswa.dart';
+import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/laporan_bug.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 
@@ -32,25 +32,27 @@ class HomeScreenAdmin extends StatelessWidget {
       ),
       body: Container(
         margin: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            const SizedBox(height: 60),
-            Row(
-              children: const [
-                Siswa(),
-                SizedBox(width: 20),
-                Guru(),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              children: const [
-                BelumKonfirmasi(),
-                SizedBox(width: 20),
-                LaporanBug(),
-              ],
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 60),
+              Row(
+                children: const [
+                  Siswa(),
+                  SizedBox(width: 20),
+                  Guru(),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: const [
+                  BelumKonfirmasi(),
+                  SizedBox(width: 20),
+                  LaporanBug(),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

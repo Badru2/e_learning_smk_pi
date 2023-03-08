@@ -157,6 +157,12 @@ const font30w7 = TextStyle(
   color: Colors.black,
 );
 
+const font30w7gr = TextStyle(
+  fontSize: 30,
+  fontWeight: FontWeight.w700,
+  color: Colors.grey,
+);
+
 const font9w4 = TextStyle(
   fontSize: 9,
   fontWeight: FontWeight.w400,

@@ -4,17 +4,17 @@ import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class BelumKonfirmasi extends StatelessWidget {
-  const BelumKonfirmasi({super.key});
+class Siswa extends StatelessWidget {
+  const Siswa({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 210,
       width: MediaQuery.of(context).size.width * 0.3,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFFEA394A),
+            backgroundColor: const Color(0xFF367CFF),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20))),
         onPressed: () {
@@ -40,14 +40,14 @@ class BelumKonfirmasi extends StatelessWidget {
                     dense: false,
                     contentPadding: EdgeInsets.zero,
                     title: Text(
-                      'Belum Konfirmasi',
+                      'Jumlah Murid',
                       style: font35w6w,
                     ),
                   ),
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text(
-                      '95',
+                      '1.575',
                       style: font50w6w,
                     ),
                   ),
