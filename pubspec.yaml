@@ -64,6 +64,7 @@ dependencies:
   firebase_database: ^10.0.14
   sidebarx: ^0.15.0
   data_table_2: ^2.3.12
+  flutter_colorpicker: ^1.0.3
 
 dev_dependencies:
   flutter_test:

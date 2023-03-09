@@ -1,5 +1,8 @@
 import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
+import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
+import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_mapel.dart';
 import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_screen.dart';
+import 'package:e_learning_smk_pi/screens/murid/login/sign_up/kelas.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 
@@ -159,6 +162,8 @@ class _AllScreen extends StatelessWidget {
         switch (controller.selectedIndex) {
           case 0:
             return const HomeScreenAdmin();
+          case 3:
+            return const TambahKelasAdmin();
           case 5:
             return const TambahBeritaScreen();
           default:

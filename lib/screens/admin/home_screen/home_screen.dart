@@ -2,6 +2,7 @@ import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/belum_konfirm
 import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/guru.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/siswa.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/tombol/laporan_bug.dart';
+import 'package:e_learning_smk_pi/widgets/appbar_admin.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 
@@ -11,25 +12,7 @@ class HomeScreenAdmin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        titleSpacing: 20,
-        leadingWidth: 100,
-        leading: Image.asset('assets/image/image 1.png', scale: 1.5),
-        title: const Text('SMK PI', style: font30w7),
-        toolbarHeight: 70,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.exit_to_app,
-              color: Colors.red,
-            ),
-          ),
-          const SizedBox(width: 20),
-        ],
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-      ),
+      appBar: AppbarAdmin(),
       body: Container(
         margin: const EdgeInsets.all(20),
         child: SingleChildScrollView(
