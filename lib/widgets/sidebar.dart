@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/screens/admin/guru_screen/guru_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_mapel.dart';
@@ -5,6 +6,8 @@ import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_scre
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/kelas.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
+
+import '../screens/admin/kelas/kelas_screen.dart';
 
 class SideBarAdmin extends StatefulWidget {
   const SideBarAdmin({super.key});
@@ -100,7 +103,6 @@ class SideBar extends StatelessWidget {
         ),
       ),
       showToggleButton: false,
-
       // footerDivider: Divider(color: Colors.white.withOpacity(0.2)),
       // headerBuilder: (context, extended) {
       //   return SizedBox(
@@ -162,8 +164,10 @@ class _AllScreen extends StatelessWidget {
         switch (controller.selectedIndex) {
           case 0:
             return const HomeScreenAdmin();
+          case 2:
+            return const GuruScreenAdmin();
           case 3:
-            return const TambahKelasAdmin();
+            return const KelasScreenAdmin();
           case 5:
             return const TambahBeritaScreen();
           default:
@@ -180,19 +184,17 @@ class _AllScreen extends StatelessWidget {
 String _getTitleByIndex(int index) {
   switch (index) {
     case 0:
-      return 'Home';
+      return 'Dashboard';
     case 1:
-      return 'Search';
+      return 'Murid';
     case 2:
-      return 'People';
+      return 'Guru';
     case 3:
-      return 'Favorites';
+      return 'Kelas';
     case 4:
-      return 'Custom iconWidget';
+      return 'Jadwal';
     case 5:
-      return 'Profile';
-    case 6:
-      return 'Settings';
+      return 'Tambah Berita';
     default:
       return 'Not found page';
   }

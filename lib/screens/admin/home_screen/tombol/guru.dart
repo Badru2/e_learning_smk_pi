@@ -1,6 +1,8 @@
+import 'package:e_learning_smk_pi/screens/admin/guru_screen/guru_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/login/login_screen.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
+import 'package:e_learning_smk_pi/widgets/sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -20,7 +22,7 @@ class Guru extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const AdminLoginScreen()),
+            MaterialPageRoute(builder: (context) => const SideBarAdmin()),
           );
         },
         child: Container(
