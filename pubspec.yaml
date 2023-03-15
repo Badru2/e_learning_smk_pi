@@ -65,6 +65,8 @@ dependencies:
   sidebarx: ^0.15.0
   data_table_2: ^2.3.12
   flutter_colorpicker: ^1.0.3
+  flutter_admin_scaffold: ^1.1.2
+  image: ^4.0.15
 
 dev_dependencies:
   flutter_test:

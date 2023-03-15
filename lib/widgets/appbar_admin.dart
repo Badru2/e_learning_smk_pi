@@ -12,7 +12,7 @@ class AppbarAdmin extends StatelessWidget with PreferredSizeWidget {
       leadingWidth: 100,
       leading: Image.asset('assets/image/image 1.png', scale: 1.5),
       title: const Text('SMK PI', style: font30w7),
-      toolbarHeight: 70,
+      toolbarHeight: 100,
       actions: [
         IconButton(
           onPressed: () {
@@ -20,8 +20,8 @@ class AppbarAdmin extends StatelessWidget with PreferredSizeWidget {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  titlePadding: EdgeInsets.all(50),
-                  actionsPadding: EdgeInsets.only(bottom: 20, top: 40),
+                  titlePadding: const EdgeInsets.all(50),
+                  actionsPadding: const EdgeInsets.only(bottom: 20, top: 40),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   actionsAlignment: MainAxisAlignment.spaceEvenly,
@@ -30,15 +30,15 @@ class AppbarAdmin extends StatelessWidget with PreferredSizeWidget {
                     style: font20w6b,
                   ),
                   actions: [
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.125,
                       child: Container(
                         alignment: Alignment.centerLeft,
                         width: 50,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                            backgroundColor: Color(0xFFE80F0F),
+                            padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                            backgroundColor: const Color(0xFFE80F0F),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -54,8 +54,8 @@ class AppbarAdmin extends StatelessWidget with PreferredSizeWidget {
                         alignment: Alignment.centerRight,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                            backgroundColor: Color(0xFF00CD2D),
+                            padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                            backgroundColor: const Color(0xFF00CD2D),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),

@@ -1,4 +1,5 @@
 import 'package:data_table_2/data_table_2.dart';
+import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_x.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_xi.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_xii.dart';
@@ -32,7 +33,13 @@ class _KelasScreenAdminState extends State<KelasScreenAdmin> {
                         fixedSize: const Size(200, 41),
                         backgroundColor: const Color(0xFF119A47),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const TambahKelasAdmin(),
+                            ));
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: const [
@@ -43,12 +50,12 @@ class _KelasScreenAdminState extends State<KelasScreenAdmin> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
-                KelasX(),
-                SizedBox(height: 20),
-                KelasXI(),
-                SizedBox(height: 20),
-                KelasXII(),
+                const SizedBox(height: 20),
+                const KelasX(),
+                const SizedBox(height: 20),
+                const KelasXI(),
+                const SizedBox(height: 20),
+                const KelasXII(),
                 // Container(
                 //   decoration: BoxDecoration(
                 //     borderRadius: BorderRadius.circular(10),

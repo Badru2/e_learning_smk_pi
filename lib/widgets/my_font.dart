@@ -163,6 +163,12 @@ const font30w7gr = TextStyle(
   color: Colors.grey,
 );
 
+const font30w7w = TextStyle(
+  fontSize: 30,
+  fontWeight: FontWeight.w700,
+  color: Colors.white,
+);
+
 const font9w4 = TextStyle(
   fontSize: 9,
   fontWeight: FontWeight.w400,
@@ -171,6 +177,12 @@ const font9w4 = TextStyle(
 
 const font35w6w = TextStyle(
   fontSize: 35,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
+);
+
+const font40w6w = TextStyle(
+  fontSize: 40,
   fontWeight: FontWeight.w600,
   color: Colors.white,
 );
