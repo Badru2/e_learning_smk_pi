@@ -4,6 +4,7 @@ import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_x.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_xi.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_xii.dart';
 import 'package:e_learning_smk_pi/widgets/appbar_admin.dart';
+import 'package:e_learning_smk_pi/widgets/sidebar_active.dart';
 import 'package:flutter/material.dart';
 
 class KelasScreenAdmin extends StatefulWidget {
@@ -37,7 +38,7 @@ class _KelasScreenAdminState extends State<KelasScreenAdmin> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const TambahKelasAdmin(),
+                              builder: (context) => const SideBarActive(),
                             ));
                       },
                       child: Row(

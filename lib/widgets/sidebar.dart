@@ -1,14 +1,12 @@
 import 'package:e_learning_smk_pi/screens/admin/guru_screen/guru_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
+import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/edit_jadwal.dart';
+import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/jadwal_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/detail_kelas.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
-import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_mapel.dart';
 import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_screen.dart';
-import 'package:e_learning_smk_pi/screens/murid/login/sign_up/kelas.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
-
-import '../screens/admin/kelas/kelas_screen.dart';
 
 class SideBarAdmin extends StatefulWidget {
   const SideBarAdmin({super.key});
@@ -29,7 +27,7 @@ class _SideBarAdminState extends State<SideBarAdmin> {
         children: [
           SideBar(controller: _controller),
           Expanded(
-              child: _AllScreen(
+              child: AllScreen(
             controller: _controller,
           ))
         ],
@@ -147,8 +145,8 @@ class SideBar extends StatelessWidget {
   }
 }
 
-class _AllScreen extends StatelessWidget {
-  const _AllScreen({
+class AllScreen extends StatelessWidget {
+  const AllScreen({
     Key? key,
     required this.controller,
   }) : super(key: key);
@@ -169,6 +167,8 @@ class _AllScreen extends StatelessWidget {
             return const GuruScreenAdmin();
           case 3:
             return const DetailKelasAdmin();
+          case 4:
+            return const EditJadwalAdmin();
           case 5:
             return const TambahBeritaScreen();
           default:

@@ -1,9 +1,7 @@
 import 'package:data_table_2/data_table_2.dart';
 import 'package:e_learning_smk_pi/widgets/appbar_admin.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
-import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class GuruScreenAdmin extends StatefulWidget {
   const GuruScreenAdmin({super.key});
@@ -16,7 +14,8 @@ class _GuruScreenAdminState extends State<GuruScreenAdmin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppbarAdmin(),
+      // route: '/GuruAdmin',
+      appBar: const AppbarAdmin(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
@@ -30,7 +29,7 @@ class _GuruScreenAdminState extends State<GuruScreenAdmin> {
                     child: Container(
                       width: 180,
                       height: 50,
-                      margin: EdgeInsets.all(20),
+                      margin: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: const Color(0xFF2A39D6),
                         borderRadius: BorderRadius.circular(10),

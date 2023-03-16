@@ -1,7 +1,11 @@
 import 'dart:ui';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_learning_smk_pi/responsive.dart';
+import 'package:e_learning_smk_pi/route_page.dart';
+import 'package:e_learning_smk_pi/screens/admin/guru_screen/guru_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
+import 'package:e_learning_smk_pi/screens/admin/sidebar_admin.dart';
 import 'package:e_learning_smk_pi/widgets/my_border.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/sidebar.dart';
@@ -333,12 +337,18 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                                   child: ElevatedButton(
                                     onPressed: () {
                                       Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const SideBarAdmin(),
-                                        ),
-                                      );
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                SideBarAdmin(),
+                                          ));
+                                      // PageRouteBuilder(
+                                      //   pageBuilder: (context, animation,
+                                      //       secondaryAnimation) {
+                                      //     final page = _getPageWidget(settings);
+                                      //     return page;
+                                      //   },
+                                      // );
                                     },
                                     style: ElevatedButton.styleFrom(
                                         fixedSize: Size(screenSize.width, 50),
@@ -414,8 +424,10 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
     }
     final uri = Uri.parse(settings.name!);
     switch (uri.path) {
-      case '/':
-        return HomeScreenAdmin();
+      case dashboard:
+        return const HomeScreenAdmin();
+      case guru:
+        return const GuruScreenAdmin();
     }
     return null;
   }

@@ -1,3 +1,24 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#293153",
+    "activityBar.background": "#293153",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#954a58",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#293153",
+    "statusBar.background": "#181d31",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#293153",
+    "statusBarItem.remoteBackground": "#181d31",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#181d31",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#181d3199",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#181D31",
+  "cmake.sourceDirectory": "${workspaceFolder}/linux"
 }
