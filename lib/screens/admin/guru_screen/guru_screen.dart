@@ -11,8 +11,34 @@ class GuruScreenAdmin extends StatefulWidget {
 }
 
 class _GuruScreenAdminState extends State<GuruScreenAdmin> {
+  List data = [
+    'NIK',
+    'Nama',
+    'Email',
+    'Jenis Kelamin',
+    'TTL',
+    'Alamat',
+    'Mata Pelajaran',
+    'Wali Kelas',
+    'no. telepon',
+    'Kode',
+  ];
+
+  List isiData = [
+    '08414812481248',
+    'lis',
+    'Iismtk132@gmail.com',
+    'Perempuan',
+    'Bandung, 09 Juli 1985',
+    'JL.Guling PI NO.59',
+    'Matematika',
+    'XI-OTKP',
+    '08137685678',
+    'A',
+  ];
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       // route: '/GuruAdmin',
       appBar: const AppbarAdmin(),
@@ -158,8 +184,111 @@ class _GuruScreenAdminState extends State<GuruScreenAdmin> {
                                   showDialog(
                                     context: context,
                                     builder: (context) {
-                                      return const AlertDialog(
-                                        title: Text('HE He Boay'),
+                                      return AlertDialog(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          side: const BorderSide(
+                                            color: Colors.black,
+                                            width: 3,
+                                          ),
+                                        ),
+                                        title: Row(
+                                          children: [
+                                            SizedBox(
+                                              width: screenSize.width * 0.38,
+                                              child: const Center(
+                                                  child: Text('Detail',
+                                                      style: font20w6b)),
+                                            ),
+                                            IconButton(
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                              },
+                                              icon: const Icon(
+                                                Icons.cancel_outlined,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        actions: [
+                                          Container(
+                                            margin:
+                                                const EdgeInsets.only(left: 20),
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                  width:
+                                                      screenSize.width * 0.25,
+                                                  // width: 300,
+                                                  height: 400,
+                                                  child: ListView.builder(
+                                                    itemBuilder:
+                                                        (context, index) {
+                                                      return Container(
+                                                        margin: const EdgeInsets
+                                                            .only(
+                                                          bottom: 10,
+                                                          top: 5,
+                                                        ),
+                                                        child: Row(
+                                                          children: [
+                                                            SizedBox(
+                                                              width: 150,
+                                                              child: Text(
+                                                                data[index],
+                                                                style:
+                                                                    font20w6b,
+                                                              ),
+                                                            ),
+                                                            const Text(
+                                                              ':',
+                                                              style: font20w6b,
+                                                            ),
+                                                            const SizedBox(
+                                                                width: 10),
+                                                            Text(
+                                                              isiData[index],
+                                                              style: font20w6b,
+                                                            )
+                                                          ],
+                                                        ),
+                                                      );
+                                                    },
+                                                    itemCount: 10,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width:
+                                                      screenSize.width * 0.15,
+                                                  height: 400,
+                                                  child: Stack(
+                                                    children: [
+                                                      Positioned(
+                                                        top: 30,
+                                                        child: Container(
+                                                          // alignment:
+                                                          //     // Alignment.center,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            color: const Color(
+                                                                0xFFCDCDCD),
+                                                          ),
+                                                          width: 220,
+                                                          height: 270,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          )
+                                        ],
                                       );
                                     },
                                   );

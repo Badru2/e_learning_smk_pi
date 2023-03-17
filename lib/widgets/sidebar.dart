@@ -4,6 +4,7 @@ import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/edit_jadwal.dart';
 import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/jadwal_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/detail_kelas.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
+import 'package:e_learning_smk_pi/screens/admin/siswa_screen/siswa_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
@@ -163,6 +164,8 @@ class AllScreen extends StatelessWidget {
         switch (controller.selectedIndex) {
           case 0:
             return const HomeScreenAdmin();
+          case 1:
+            return const SiswaScreenAdmin();
           case 2:
             return const GuruScreenAdmin();
           case 3:
