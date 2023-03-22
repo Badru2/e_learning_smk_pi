@@ -1,8 +1,6 @@
 import 'package:e_learning_smk_pi/widgets/appbar_admin.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:data_table_2/paginated_data_table_2.dart';
 
 class SiswaScreenAdmin extends StatefulWidget {
@@ -16,27 +14,39 @@ class _SiswaScreenAdminState extends State<SiswaScreenAdmin> {
   List data = [
     'NIK',
     'Nama',
-    'Email',
+    'E-Mail',
     'Jenis Kelamin',
+    'Agama',
     'TTL',
     'Alamat',
-    'Mata Pelajaran',
-    'Wali Kelas',
-    'no. telepon',
-    'Kode',
+    'Jurusan',
+    'Kelas',
+    'no. Telepon',
+    'Nama Ayah',
+    'Nama Ibu',
+    'Alamat Orang tua',
+    'no. telepon Orang tua',
+    'Pekerjaan Ayah',
+    'Pekerjaan Ibu'
   ];
 
   List isiData = [
-    '08414812481248',
+    '20214124124',
     'lis',
     'Iismtk132@gmail.com',
     'Perempuan',
+    'Islam',
     'Bandung, 09 Juli 1985',
     'JL.Guling PI NO.59',
-    'Matematika',
-    'XI-OTKP',
+    'RPL',
+    'XI',
     '08137685678',
-    'A',
+    'Samsudin',
+    'Juliasari',
+    'Jl. cihanjuang Kp. centeng rt 01 rw 07 kec. parongpong kab. bandung barat',
+    '08214986143',
+    'Arsitek',
+    'Dokter',
   ];
   @override
   Widget build(BuildContext context) {
@@ -185,7 +195,7 @@ class _SiswaScreenAdminState extends State<SiswaScreenAdmin> {
                                         title: Row(
                                           children: [
                                             SizedBox(
-                                              width: screenSize.width * 0.38,
+                                              width: screenSize.width * 0.45,
                                               child: const Center(
                                                   child: Text('Detail',
                                                       style: font20w6b)),
@@ -208,9 +218,9 @@ class _SiswaScreenAdminState extends State<SiswaScreenAdmin> {
                                               children: [
                                                 SizedBox(
                                                   width:
-                                                      screenSize.width * 0.25,
+                                                      screenSize.width * 0.35,
                                                   // width: 300,
-                                                  height: 400,
+                                                  height: 700,
                                                   child: ListView.builder(
                                                     itemBuilder:
                                                         (context, index) {
@@ -223,7 +233,7 @@ class _SiswaScreenAdminState extends State<SiswaScreenAdmin> {
                                                         child: Row(
                                                           children: [
                                                             SizedBox(
-                                                              width: 150,
+                                                              width: 200,
                                                               child: Text(
                                                                 data[index],
                                                                 style:
@@ -236,36 +246,40 @@ class _SiswaScreenAdminState extends State<SiswaScreenAdmin> {
                                                             ),
                                                             const SizedBox(
                                                                 width: 10),
-                                                            Text(
-                                                              isiData[index],
-                                                              style: font20w6b,
+                                                            SizedBox(
+                                                              width: 400,
+                                                              child: Text(
+                                                                isiData[index],
+                                                                style:
+                                                                    font20w6b,
+                                                              ),
                                                             )
                                                           ],
                                                         ),
                                                       );
                                                     },
-                                                    itemCount: 10,
+                                                    itemCount: 16,
                                                   ),
                                                 ),
                                                 SizedBox(
                                                   width:
                                                       screenSize.width * 0.15,
-                                                  height: 400,
+                                                  height: 700,
                                                   child: Stack(
                                                     children: [
                                                       Positioned(
-                                                        top: 30,
+                                                        top: 0,
                                                         child: Container(
-                                                          // alignment:
-                                                          //     // Alignment.center,
                                                           decoration:
                                                               BoxDecoration(
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10),
+                                                              10,
+                                                            ),
                                                             color: const Color(
-                                                                0xFFCDCDCD),
+                                                              0xFFCDCDCD,
+                                                            ),
                                                           ),
                                                           width: 220,
                                                           height: 270,

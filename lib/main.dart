@@ -1,4 +1,5 @@
 import 'package:e_learning_smk_pi/screens/admin/login/login_screen.dart';
+import 'package:e_learning_smk_pi/screens/guru/tugas/tugas_screen.dart';
 import 'package:e_learning_smk_pi/screens/murid/homescreen/homescreen.dart';
 import 'package:e_learning_smk_pi/widgets/navbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       // navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       // home: StreamBuilder<User?>(
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
       //     }
       //   },
       // ),
-      home: AdminLoginScreen(),
+      home: TambahTugasScreenGuru(),
     );
   }
 }

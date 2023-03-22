@@ -42,28 +42,32 @@ class _DetailTugasTextState extends State<DetailTugasText> {
       body: Stack(
         children: [
           Positioned(
-              top: 0,
-              child: SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.95,
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: Column(children: const <Widget>[
-                    ListTile(
-                      title: Text(
-                        'Catatan :',
-                        style: font20w6b,
-                      ),
-                    ),
-                    ListTile(
-                        title: Text(
-                      'Silahkan pelajari dan tulis dibuku cataan kalian masing-masing materi berikut,pembahasanya akan disampaikan dalam pembelajaran tatap muka di kampus 2 nanti.',
-                      style: font12w5,
-                    )),
-                    ListTile(
-                        title: Text(
-                      'Tugas :',
+            top: 0,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width * 0.95,
+              height: MediaQuery.of(context).size.height * 0.3,
+              child: Column(
+                children: const <Widget>[
+                  ListTile(
+                    title: Text(
+                      'Catatan :',
                       style: font20w6b,
-                    ))
-                  ])))
+                    ),
+                  ),
+                  ListTile(
+                      title: Text(
+                    'Silahkan pelajari dan tulis dibuku cataan kalian masing-masing materi berikut,pembahasanya akan disampaikan dalam pembelajaran tatap muka di kampus 2 nanti.',
+                    style: font12w5,
+                  )),
+                  ListTile(
+                      title: Text(
+                    'Tugas :',
+                    style: font20w6b,
+                  ))
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

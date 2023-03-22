@@ -14,7 +14,7 @@ class _IklanState extends State<Iklan> {
   Widget build(BuildContext context) {
     return Responsive(
       desktop: Container(
-        margin: EdgeInsets.fromLTRB(30, 20, 60, 20),
+        margin: const EdgeInsets.fromLTRB(30, 20, 60, 20),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -25,11 +25,12 @@ class _IklanState extends State<Iklan> {
                   backgroundColor: Colors.white,
                   padding: const EdgeInsets.fromLTRB(370, 230, 370, 230),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      side: const BorderSide(
-                        color: Colors.black,
-                        width: 3,
-                      )),
+                    borderRadius: BorderRadius.circular(5),
+                    side: const BorderSide(
+                      color: Colors.black,
+                      width: 3,
+                    ),
+                  ),
                 ),
                 child: Column(
                   children: const [
@@ -45,7 +46,7 @@ class _IklanState extends State<Iklan> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerRight,
                 child: ElevatedButton(

@@ -1,9 +1,7 @@
 import 'package:e_learning_smk_pi/screens/admin/guru_screen/guru_screen.dart';
-import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
+import 'package:e_learning_smk_pi/screens/admin/home_screen/belum_konfirmasi.dart';
 import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/edit_jadwal.dart';
-import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/jadwal_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/detail_kelas.dart';
-import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
 import 'package:e_learning_smk_pi/screens/admin/siswa_screen/siswa_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_screen.dart';
 import 'package:flutter/material.dart';
@@ -59,14 +57,13 @@ class SideBar extends StatelessWidget {
             topLeft: Radius.circular(10),
           ),
         ),
-        // hoverColor: Colors.grey,
         textStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
         selectedTextStyle: const TextStyle(color: Colors.black),
         itemTextPadding: const EdgeInsets.only(left: 30),
         selectedItemTextPadding: const EdgeInsets.only(left: 30),
         itemDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Color(0xFF13005A)),
+          border: Border.all(color: const Color(0xFF13005A)),
         ),
         selectedItemDecoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
@@ -76,9 +73,6 @@ class SideBar extends StatelessWidget {
           border: Border.all(
             color: Colors.grey.withOpacity(0.37),
           ),
-          // gradient: const LinearGradient(
-          //   colors: [Colors.white],
-          // ),
           color: Colors.white,
           boxShadow: [
             BoxShadow(
@@ -103,16 +97,6 @@ class SideBar extends StatelessWidget {
         ),
       ),
       showToggleButton: false,
-      // footerDivider: Divider(color: Colors.white.withOpacity(0.2)),
-      // headerBuilder: (context, extended) {
-      //   return SizedBox(
-      //     height: 100,
-      //     child: Padding(
-      //       padding: const EdgeInsets.all(16.0),
-      //       child: Image.asset('assets/images/avatar.png'),
-      //     ),
-      //   );
-      // },
       items: [
         SidebarXItem(
           icon: Icons.home,
@@ -163,7 +147,7 @@ class AllScreen extends StatelessWidget {
         final pageTitle = _getTitleByIndex(controller.selectedIndex);
         switch (controller.selectedIndex) {
           case 0:
-            return const HomeScreenAdmin();
+            return const BelumKonfirmasiAdmin();
           case 1:
             return const SiswaScreenAdmin();
           case 2:
