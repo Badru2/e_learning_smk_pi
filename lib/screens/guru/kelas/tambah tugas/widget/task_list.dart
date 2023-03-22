@@ -1,41 +1,37 @@
 import 'package:flutter/material.dart';
 
-class DeskripsiTugas extends StatelessWidget {
-  const DeskripsiTugas({super.key});
+class TaskListTugas extends StatelessWidget {
+  const TaskListTugas({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 20),
-      alignment: Alignment.bottomLeft,
+      padding: const EdgeInsets.only(left: 18),
+      alignment: Alignment.centerLeft,
       child: Column(
         children: [
           Row(
             children: [
               InkWell(
-                onTap: () {},
+                onTap: (() {}),
                 child: const Icon(
-                  //   Icons.text_description_20_filled,
-                  Icons.description_sharp,
-                  size: 20,
+                  Icons.task_alt_outlined,
+                  size: 28,
                 ),
               ),
               const SizedBox(
-                width: 12,
+                width: 24,
               ),
               const Center(
                 child: Text(
-                  'Tambah Deskripsi',
+                  '100 Points',
                   style: TextStyle(
                     fontFamily: 'Outfit',
-                    fontSize: 10,
-                    color: Color(0xFFD9D9D9),
+                    fontSize: 14,
+                    color: Color(0xFF000000),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-              ),
-              const SizedBox(
-                width: 10,
               ),
             ],
           ),

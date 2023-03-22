@@ -1,7 +1,9 @@
 import 'package:e_learning_smk_pi/screens/admin/login/login_screen.dart';
-import 'package:e_learning_smk_pi/screens/guru/tugas/tugas_screen.dart';
+import 'package:e_learning_smk_pi/screens/guru/kelas/tambah%20tugas/tugas_screen.dart';
+import 'package:e_learning_smk_pi/screens/guru/login/sign_in/login_screen.dart';
 import 'package:e_learning_smk_pi/screens/murid/homescreen/homescreen.dart';
 import 'package:e_learning_smk_pi/widgets/navbar.dart';
+import 'package:e_learning_smk_pi/widgets/navbarguru.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +44,7 @@ class MyApp extends StatelessWidget {
       //     }
       //   },
       // ),
-      home: TambahTugasScreenGuru(),
+      home: LoginScreenGuru(),
     );
   }
 }

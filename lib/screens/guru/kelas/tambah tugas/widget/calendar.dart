@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TaskListTugas extends StatelessWidget {
-  const TaskListTugas({super.key});
+class CalendarTugas extends StatelessWidget {
+  const CalendarTugas({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 18),
-      alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.only(left: 20, top: 8),
+      alignment: Alignment.bottomLeft,
       child: Column(
         children: [
           Row(
@@ -15,8 +15,22 @@ class TaskListTugas extends StatelessWidget {
               InkWell(
                 onTap: (() {}),
                 child: const Icon(
-                  Icons.task_alt_outlined,
-                  size: 24,
+                  Icons.calendar_today_outlined,
+                  size: 27,
+                ),
+              ),
+              const SizedBox(
+                width: 22,
+              ),
+              const Center(
+                child: Text(
+                  'DD/MM/YYYY',
+                  style: TextStyle(
+                    fontFamily: 'Outfit',
+                    fontSize: 14,
+                    color: Color(0xFF000000),
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -24,7 +38,7 @@ class TaskListTugas extends StatelessWidget {
               ),
               const Center(
                 child: Text(
-                  '100 Points',
+                  '00:00 Pm/Am',
                   style: TextStyle(
                     fontFamily: 'Outfit',
                     fontSize: 10,

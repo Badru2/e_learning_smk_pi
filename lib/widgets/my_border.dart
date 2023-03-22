@@ -18,21 +18,29 @@ const boxShadows = BoxShadow(
 );
 
 final enabledBorderB = OutlineInputBorder(
-  borderSide: BorderSide(color: Colors.black),
+  borderSide: const BorderSide(color: Colors.black),
   borderRadius: BorderRadius.circular(15),
 );
 
 final enabledBorderB2 = OutlineInputBorder(
-  borderSide: BorderSide(color: Colors.black, width: 2),
+  borderSide: const BorderSide(color: Colors.black, width: 2),
   borderRadius: BorderRadius.circular(15),
 );
 
 final focusedBorderB = OutlineInputBorder(
-  borderSide: BorderSide(color: Colors.black),
+  borderSide: const BorderSide(color: Colors.black),
   borderRadius: BorderRadius.circular(15),
 );
 
 final focusedBorderB2 = OutlineInputBorder(
-  borderSide: BorderSide(color: Colors.black, width: 2),
+  borderSide: const BorderSide(color: Colors.black, width: 2),
   borderRadius: BorderRadius.circular(15),
+);
+
+final enabledBorderU = UnderlineInputBorder(
+  borderSide: BorderSide(color: Colors.black),
+);
+
+final focusedBorderU = UnderlineInputBorder(
+  borderSide: BorderSide(color: Colors.black),
 );
