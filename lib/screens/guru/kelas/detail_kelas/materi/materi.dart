@@ -1,4 +1,5 @@
 import 'package:e_learning_smk_pi/screens/guru/kelas/detail_kelas/materi/detail_materi.dart';
+import 'package:e_learning_smk_pi/screens/guru/kelas/tambah_materi/tambah_materi.dart';
 import 'package:flutter/material.dart';
 
 class MateriButton extends StatelessWidget {
@@ -106,7 +107,13 @@ class MateriButton extends StatelessWidget {
             children: [
               Container(width: 10),
               FloatingActionButton.large(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TambahMateriGuru(),
+                      ));
+                },
                 backgroundColor: const Color(0xFF2A39D6),
                 child: const Icon(
                   Icons.add,

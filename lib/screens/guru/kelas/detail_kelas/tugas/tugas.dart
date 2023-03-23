@@ -1,4 +1,5 @@
-import 'package:e_learning_smk_pi/screens/guru/kelas/tambah%20tugas/tugas_screen.dart';
+import 'package:e_learning_smk_pi/screens/guru/kelas/detail_kelas/tugas/detail_tugas/detail_screen.dart';
+import 'package:e_learning_smk_pi/screens/guru/kelas/tambah_tugas/tugas_screen.dart';
 import 'package:e_learning_smk_pi/screens/murid/tugas/tugas_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -20,7 +21,13 @@ class TugasButton extends StatelessWidget {
                   backgroundColor: const Color(0xFFCC464E),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10))),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DetailTugasGuru(),
+                    ));
+              },
               child: Column(
                 children: [
                   Container(

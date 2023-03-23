@@ -1,5 +1,5 @@
 import 'package:e_learning_smk_pi/screens/admin/login/login_screen.dart';
-import 'package:e_learning_smk_pi/screens/guru/kelas/tambah%20tugas/tugas_screen.dart';
+import 'package:e_learning_smk_pi/screens/guru/kelas/tambah_tugas/tugas_screen.dart';
 import 'package:e_learning_smk_pi/screens/guru/login/sign_in/login_screen.dart';
 import 'package:e_learning_smk_pi/screens/murid/homescreen/homescreen.dart';
 import 'package:e_learning_smk_pi/widgets/navbar.dart';

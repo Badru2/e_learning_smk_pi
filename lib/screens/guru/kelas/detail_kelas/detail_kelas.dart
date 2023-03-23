@@ -21,7 +21,7 @@ class _DetailKelasGuruState extends State<DetailKelasGuru> {
     // Tugas
     const TugasButton(),
     // Anggota
-    AnggotaSiswaI(),
+    const AnggotaSiswaI(),
   ];
   @override
   Widget build(BuildContext context) {

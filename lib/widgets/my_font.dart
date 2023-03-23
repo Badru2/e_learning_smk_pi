@@ -51,6 +51,7 @@ const font20w6g = TextStyle(
 
 const font20w6b = TextStyle(
   fontFamily: 'Outfit',
+  color: Colors.black,
   fontSize: 20,
   fontWeight: FontWeight.w600,
 );
