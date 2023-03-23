@@ -1,5 +1,6 @@
 import 'package:e_learning_smk_pi/screens/admin/guru_screen/guru_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/belum_konfirmasi.dart';
+import 'package:e_learning_smk_pi/screens/admin/home_screen/lapor_bug.dart';
 import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/edit_jadwal.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/detail_kelas.dart';
 import 'package:e_learning_smk_pi/screens/admin/siswa_screen/siswa_screen.dart';
@@ -147,7 +148,7 @@ class AllScreen extends StatelessWidget {
         final pageTitle = _getTitleByIndex(controller.selectedIndex);
         switch (controller.selectedIndex) {
           case 0:
-            return const BelumKonfirmasiAdmin();
+            return const LaporBugAdmin();
           case 1:
             return const SiswaScreenAdmin();
           case 2:

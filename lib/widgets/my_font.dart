@@ -193,3 +193,9 @@ const font50w6w = TextStyle(
   fontWeight: FontWeight.w600,
   color: Colors.white,
 );
+
+const font50w6b = TextStyle(
+  fontSize: 50,
+  fontWeight: FontWeight.w600,
+  color: Colors.black,
+);
