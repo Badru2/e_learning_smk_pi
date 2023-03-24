@@ -1,5 +1,6 @@
 import 'package:e_learning_smk_pi/main.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/login_screen.dart';
+import 'package:e_learning_smk_pi/screens/murid/login/sign_up/isi_profile.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/jurusan.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/kelas.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
@@ -127,8 +128,8 @@ class _SignUpState extends State<SignUp> {
                     ),
                     const SizedBox(height: 10),
                     const Jurusan(),
-                    const SizedBox(height: 10),
-                    const Kelas(),
+                    // const SizedBox(height: 10),
+                    // const Kelas(),
                     Container(
                       alignment: Alignment.centerLeft,
                       child: TextButton(
@@ -172,7 +173,13 @@ class _SignUpState extends State<SignUp> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      onPressed: signUp,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => IsiProfile(),
+                            ));
+                      },
                       child: const Center(
                         child: Padding(
                           padding: EdgeInsets.all(13.0),

@@ -1,4 +1,5 @@
 import 'package:e_learning_smk_pi/screens/murid/homescreen/widgets/lapor_bug.dart';
+import 'package:e_learning_smk_pi/screens/murid/homescreen/widgets/tentang.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/isi_profile.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/test.dart';
 import 'package:e_learning_smk_pi/screens/murid/login/sign_up/testread.dart';
@@ -47,7 +48,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Test()));
+                  context, MaterialPageRoute(builder: (context) => Tentang()));
             },
           ),
           ListTile(

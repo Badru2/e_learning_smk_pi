@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_learning_smk_pi/screens/murid/login/login_screen.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/navbar.dart';
 import 'package:flutter/material.dart';
@@ -284,14 +285,24 @@ class _SIsiProfiletate extends State<IsiProfile> {
                       ),
                     ),
                     const SizedBox(height: 40),
-                    Row(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 20),
+                          width: 360,
+                          child: const Text(
+                            'Isi semua keterangan diatas sebagai data diri Anda',
+                            style: font15w6,
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            padding: const EdgeInsets.only(top: 13, bottom: 13),
-                            backgroundColor: const Color(0xFFF44336),
-                            fixedSize: const Size.fromWidth(90),
+                            padding: const EdgeInsets.only(
+                                top: 13, bottom: 13, left: 170, right: 170),
+                            backgroundColor: const Color(0xFF13005A),
+                            // fixedSize: const Size.fromWidth(90),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -300,13 +311,14 @@ class _SIsiProfiletate extends State<IsiProfile> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Navbar()));
+                                    builder: (context) => const LoginScreen()));
                           },
                           child: const Text(
-                            'Batal',
+                            'Daftar',
                             style: font16w6w,
                           ),
                         ),
+                        const SizedBox(height: 20),
                         // Container(
                         //   child: GestureDetector(
                         //     onTap: () {
@@ -330,38 +342,45 @@ class _SIsiProfiletate extends State<IsiProfile> {
                         //     },
                         //   ),
                         // ),
-                        InkWell(
-                          child: Text('Kirim'),
-                          onTap: () {
-                            final user = User(
-                              nik: int.parse(nikController.text),
-                              nama: namaController.text,
-                              ttl: ttlController.text,
-                              agama: agamaController.text,
-                              alamatSiswa: alamatSiswaController.text,
-                              telpSiswa: int.parse(teleponController.text),
-                              namaAyah: namaAyahController.text,
-                              namaIbu: namaIbuController.text,
-                              alamatOrtu: alamatOrtuController.text,
-                              telpOrtu: int.parse(telpOrtuController.text),
-                              kerjaAyah: kerjaAyahController.text,
-                              kerjaIbu: kerjaIbuController.text,
-                              // kelamin: kelamin.toString(),
-                            );
+                        // InkWell(
+                        // child: Text('Kirim'),
+                        // onTap: () {
 
-                            createProfile(user);
-                          },
-                        ),
+                        // final user = User(
+                        //   nik: int.parse(nikController.text),
+                        //   nama: namaController.text,
+                        //   ttl: ttlController.text,
+                        //   agama: agamaController.text,
+                        //   alamatSiswa: alamatSiswaController.text,
+                        //   telpSiswa: int.parse(teleponController.text),
+                        //   namaAyah: namaAyahController.text,
+                        //   namaIbu: namaIbuController.text,
+                        //   alamatOrtu: alamatOrtuController.text,
+                        //   telpOrtu: int.parse(telpOrtuController.text),
+                        //   kerjaAyah: kerjaAyahController.text,
+                        //   kerjaIbu: kerjaIbuController.text,
+                        //   // kelamin: kelamin.toString(),
+                        // );
+
+                        // createProfile(user);
+                        // },
+                        // ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            padding: const EdgeInsets.only(top: 13, bottom: 13),
-                            backgroundColor: const Color(0xFF0066FF),
-                            fixedSize: const Size.fromWidth(90),
+                            padding: const EdgeInsets.only(
+                                top: 13, bottom: 13, left: 170, right: 170),
+                            backgroundColor: const Color(0xFF367CFF),
+                            // fixedSize: const Size.fromWidth(90),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                           onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LoginScreen(),
+                                ));
                             // Navigator.push(
                             //   context,
                             //   MaterialPageRoute(
@@ -369,26 +388,26 @@ class _SIsiProfiletate extends State<IsiProfile> {
                             //   ),left
                             // );
                             // final user = User();
-                            final user = User(
-                              nik: int.parse(nikController.text),
-                              nama: namaController.text,
-                              ttl: ttlController.text,
-                              agama: agamaController.text,
-                              alamatSiswa: alamatSiswaController.text,
-                              telpSiswa: int.parse(teleponController.text),
-                              namaAyah: namaAyahController.text,
-                              namaIbu: namaIbuController.text,
-                              alamatOrtu: alamatOrtuController.text,
-                              telpOrtu: int.parse(telpOrtuController.text),
-                              kerjaAyah: kerjaAyahController.text,
-                              kerjaIbu: kerjaIbuController.text,
-                              // kelamin: kelamin.toString(),
-                            );
+                            // final user = User(
+                            //   nik: int.parse(nikController.text),
+                            //   nama: namaController.text,
+                            //   ttl: ttlController.text,
+                            //   agama: agamaController.text,
+                            //   alamatSiswa: alamatSiswaController.text,
+                            //   telpSiswa: int.parse(teleponController.text),
+                            //   namaAyah: namaAyahController.text,
+                            //   namaIbu: namaIbuController.text,
+                            //   alamatOrtu: alamatOrtuController.text,
+                            //   telpOrtu: int.parse(telpOrtuController.text),
+                            //   kerjaAyah: kerjaAyahController.text,
+                            //   kerjaIbu: kerjaIbuController.text,
+                            //   // kelamin: kelamin.toString(),
+                            // );
 
-                            createProfile(user);
+                            // createProfile(user);
                           },
                           child: const Text(
-                            'Simpan',
+                            'Login',
                             style: font16w6w,
                           ),
                         ),

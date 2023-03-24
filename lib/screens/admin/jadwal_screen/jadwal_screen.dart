@@ -20,7 +20,7 @@ class _JadwalScreenKelasAdminState extends State<JadwalScreenKelasAdmin> {
       body: SingleChildScrollView(
         child: Container(
           width: screenSize.width,
-          margin: const EdgeInsets.all(20),
+          margin: const EdgeInsets.all(60),
           child: Column(
             children: [
               Container(
@@ -80,14 +80,12 @@ class _JadwalScreenKelasAdminState extends State<JadwalScreenKelasAdmin> {
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(80, 20, 80, 0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.9,
                   child: DataTable2(
                     border: const TableBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
                       verticalInside: BorderSide(
                         color: Colors.black,
                       ),

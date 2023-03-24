@@ -1,9 +1,13 @@
 import 'package:e_learning_smk_pi/screens/admin/guru_screen/guru_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/belum_konfirmasi.dart';
+import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/lapor_bug.dart';
 import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/edit_jadwal.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/detail_kelas.dart';
+import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
+import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_mapel.dart';
 import 'package:e_learning_smk_pi/screens/admin/siswa_screen/siswa_screen.dart';
+import 'package:e_learning_smk_pi/screens/admin/tambah_berita/berita.dart';
 import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
@@ -148,17 +152,17 @@ class AllScreen extends StatelessWidget {
         final pageTitle = _getTitleByIndex(controller.selectedIndex);
         switch (controller.selectedIndex) {
           case 0:
-            return const LaporBugAdmin();
+            return const HomeScreenAdmin();
           case 1:
             return const SiswaScreenAdmin();
           case 2:
             return const GuruScreenAdmin();
           case 3:
-            return const DetailKelasAdmin();
+            return const TambahMapelAdmin();
           case 4:
             return const EditJadwalAdmin();
           case 5:
-            return const TambahBeritaScreen();
+            return const BeritaAdmin();
           default:
             return Text(
               pageTitle,

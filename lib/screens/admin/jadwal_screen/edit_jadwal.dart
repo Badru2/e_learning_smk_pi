@@ -30,7 +30,7 @@ class _EditJadwalAdminState extends State<EditJadwalAdmin> {
       appBar: const AppbarAdmin(),
       body: SingleChildScrollView(
         child: Container(
-          margin: const EdgeInsets.all(20),
+          margin: const EdgeInsets.fromLTRB(70, 20, 70, 20),
           child: Column(
             children: [
               Row(
@@ -41,305 +41,301 @@ class _EditJadwalAdminState extends State<EditJadwalAdmin> {
                 ],
               ),
               Container(
-                margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.75,
-                  child: DataTable2(
-                    border: const TableBorder(
-                      verticalInside: BorderSide(
-                        color: Colors.black,
-                      ),
-                      horizontalInside: BorderSide(
-                        color: Colors.black,
-                      ),
-                      bottom: BorderSide(
-                        width: 2,
-                        color: Colors.black,
-                      ),
-                      left: BorderSide(
-                        width: 2,
-                        color: Colors.black,
-                      ),
-                      right: BorderSide(
-                        width: 2,
-                        color: Colors.black,
-                      ),
-                      top: BorderSide(
-                        width: 2,
-                        color: Colors.black,
-                      ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * 0.75,
+                child: DataTable2(
+                  border: const TableBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    verticalInside: BorderSide(
+                      color: Colors.black,
                     ),
-                    headingRowColor:
-                        const MaterialStatePropertyAll(Color(0xFFD9D9D9)),
-                    columns: const [
-                      DataColumn2(
-                        label: Text(
-                          'Jam Ke -',
-                          style: font20w6b,
-                        ),
-                        size: ColumnSize.S,
-                        fixedWidth: 120,
+                    horizontalInside: BorderSide(
+                      color: Colors.black,
+                    ),
+                    bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black,
+                    ),
+                    left: BorderSide(
+                      width: 2,
+                      color: Colors.black,
+                    ),
+                    right: BorderSide(
+                      width: 2,
+                      color: Colors.black,
+                    ),
+                    top: BorderSide(
+                      width: 2,
+                      color: Colors.black,
+                    ),
+                  ),
+                  headingRowColor:
+                      const MaterialStatePropertyAll(Color(0xFFD9D9D9)),
+                  columns: const [
+                    DataColumn2(
+                      label: Text(
+                        'Jam Ke -',
+                        style: font20w6b,
                       ),
-                      DataColumn2(
-                        label: Text(
-                          'Waktu',
-                          style: font20w6b,
-                        ),
-                        size: ColumnSize.M,
+                      size: ColumnSize.S,
+                      fixedWidth: 120,
+                    ),
+                    DataColumn2(
+                      label: Text(
+                        'Waktu',
+                        style: font20w6b,
                       ),
-                      DataColumn2(
-                        label: Text(
-                          'Senin',
-                          style: font20w6b,
-                        ),
-                        size: ColumnSize.M,
+                      size: ColumnSize.M,
+                    ),
+                    DataColumn2(
+                      label: Text(
+                        'Senin',
+                        style: font20w6b,
                       ),
-                      DataColumn2(
-                        label: Text(
-                          'Selasa',
-                          style: font20w6b,
-                        ),
-                        size: ColumnSize.M,
+                      size: ColumnSize.M,
+                    ),
+                    DataColumn2(
+                      label: Text(
+                        'Selasa',
+                        style: font20w6b,
                       ),
-                      DataColumn2(
-                        label: Text(
-                          'Rabu',
-                          style: font20w6b,
-                        ),
-                        size: ColumnSize.M,
+                      size: ColumnSize.M,
+                    ),
+                    DataColumn2(
+                      label: Text(
+                        'Rabu',
+                        style: font20w6b,
                       ),
-                      DataColumn2(
-                        label: Text(
-                          'Kamis',
-                          style: font20w6b,
-                        ),
-                        size: ColumnSize.M,
+                      size: ColumnSize.M,
+                    ),
+                    DataColumn2(
+                      label: Text(
+                        'Kamis',
+                        style: font20w6b,
                       ),
-                      DataColumn2(
-                        label: Text(
-                          "Jum'at",
-                          style: font20w6b,
-                        ),
-                        size: ColumnSize.M,
-                        // fixedWidth: 90,
+                      size: ColumnSize.M,
+                    ),
+                    DataColumn2(
+                      label: Text(
+                        "Jum'at",
+                        style: font20w6b,
                       ),
-                    ],
-                    rows: List<DataRow>.generate(
-                      14,
-                      (index) => DataRow(
-                        cells: [
-                          const DataCell(Center(
-                              child: Text(
-                            '1',
-                            style: font15w6,
-                          ))),
-                          DataCell(Text('B' * (10 - index % 10))),
-                          DataCell(
-                            Container(
-                              // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
-                              // margin: const EdgeInsets.only(top: 10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                border: const Border(
-                                  bottom: BorderSide(color: Colors.black),
-                                  top: BorderSide(color: Colors.black),
-                                  left: BorderSide(color: Colors.black),
-                                  right: BorderSide(color: Colors.black),
-                                ),
+                      size: ColumnSize.M,
+                      // fixedWidth: 90,
+                    ),
+                  ],
+                  rows: List<DataRow>.generate(
+                    14,
+                    (index) => DataRow(
+                      cells: [
+                        const DataCell(
+                            Center(child: Text('1', style: font20w6b))),
+                        const DataCell(Center(
+                            child: Text('06.45-07.30', style: font20w6b))),
+                        DataCell(
+                          Container(
+                            // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
+                            // margin: const EdgeInsets.only(top: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: const Border(
+                                bottom: BorderSide(color: Colors.black),
+                                top: BorderSide(color: Colors.black),
+                                left: BorderSide(color: Colors.black),
+                                right: BorderSide(color: Colors.black),
                               ),
-                              child: DropdownButtonHideUnderline(
-                                child: DropdownButton2(
-                                  barrierColor: Colors.grey.withOpacity(0.5),
-                                  dropdownDecoration: BoxDecoration(
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      borderRadius: BorderRadius.circular(5)),
-                                  isExpanded: true,
-                                  hint: const Text('Guru', style: font10w6),
-                                  items: guru
-                                      .map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(item, style: font12w5),
-                                          ))
-                                      .toList(),
-                                  value: selectedguru,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      selectedguru = value as String;
-                                    });
-                                  },
-                                  itemHeight: 30,
-                                  // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
-                                ),
+                            ),
+                            child: DropdownButtonHideUnderline(
+                              child: DropdownButton2(
+                                barrierColor: Colors.grey.withOpacity(0.5),
+                                dropdownDecoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.black, width: 1),
+                                    borderRadius: BorderRadius.circular(5)),
+                                isExpanded: true,
+                                hint: const Text('Kosong', style: font10w6),
+                                items: guru
+                                    .map((item) => DropdownMenuItem<String>(
+                                          value: item,
+                                          child: Text(item, style: font12w5),
+                                        ))
+                                    .toList(),
+                                value: selectedguru,
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedguru = value as String;
+                                  });
+                                },
+                                itemHeight: 30,
+                                // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
                               ),
                             ),
                           ),
-                          DataCell(
-                            Container(
-                              // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
-                              // margin: const EdgeInsets.only(top: 10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                border: const Border(
-                                  bottom: BorderSide(color: Colors.black),
-                                  top: BorderSide(color: Colors.black),
-                                  left: BorderSide(color: Colors.black),
-                                  right: BorderSide(color: Colors.black),
-                                ),
+                        ),
+                        DataCell(
+                          Container(
+                            // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
+                            // margin: const EdgeInsets.only(top: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: const Border(
+                                bottom: BorderSide(color: Colors.black),
+                                top: BorderSide(color: Colors.black),
+                                left: BorderSide(color: Colors.black),
+                                right: BorderSide(color: Colors.black),
                               ),
-                              child: DropdownButtonHideUnderline(
-                                child: DropdownButton2(
-                                  barrierColor: Colors.grey.withOpacity(0.5),
-                                  dropdownDecoration: BoxDecoration(
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      borderRadius: BorderRadius.circular(5)),
-                                  isExpanded: true,
-                                  hint: const Text('Guru', style: font10w6),
-                                  items: guru
-                                      .map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(item, style: font12w5),
-                                          ))
-                                      .toList(),
-                                  value: selectedguru,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      selectedguru = value as String;
-                                    });
-                                  },
-                                  itemHeight: 30,
-                                  // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
-                                ),
+                            ),
+                            child: DropdownButtonHideUnderline(
+                              child: DropdownButton2(
+                                barrierColor: Colors.grey.withOpacity(0.5),
+                                dropdownDecoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.black, width: 1),
+                                    borderRadius: BorderRadius.circular(5)),
+                                isExpanded: true,
+                                hint: const Text('Kosong', style: font10w6),
+                                items: guru
+                                    .map((item) => DropdownMenuItem<String>(
+                                          value: item,
+                                          child: Text(item, style: font12w5),
+                                        ))
+                                    .toList(),
+                                value: selectedguru,
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedguru = value as String;
+                                  });
+                                },
+                                itemHeight: 30,
+                                // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
                               ),
                             ),
                           ),
-                          DataCell(
-                            Container(
-                              // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
-                              // margin: const EdgeInsets.only(top: 10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                border: const Border(
-                                  bottom: BorderSide(color: Colors.black),
-                                  top: BorderSide(color: Colors.black),
-                                  left: BorderSide(color: Colors.black),
-                                  right: BorderSide(color: Colors.black),
-                                ),
+                        ),
+                        DataCell(
+                          Container(
+                            // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
+                            // margin: const EdgeInsets.only(top: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: const Border(
+                                bottom: BorderSide(color: Colors.black),
+                                top: BorderSide(color: Colors.black),
+                                left: BorderSide(color: Colors.black),
+                                right: BorderSide(color: Colors.black),
                               ),
-                              child: DropdownButtonHideUnderline(
-                                child: DropdownButton2(
-                                  barrierColor: Colors.grey.withOpacity(0.5),
-                                  dropdownDecoration: BoxDecoration(
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      borderRadius: BorderRadius.circular(5)),
-                                  isExpanded: true,
-                                  hint: const Text('Guru', style: font10w6),
-                                  items: guru
-                                      .map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(item, style: font12w5),
-                                          ))
-                                      .toList(),
-                                  value: selectedguru,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      selectedguru = value as String;
-                                    });
-                                  },
-                                  itemHeight: 30,
-                                  // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
-                                ),
+                            ),
+                            child: DropdownButtonHideUnderline(
+                              child: DropdownButton2(
+                                barrierColor: Colors.grey.withOpacity(0.5),
+                                dropdownDecoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.black, width: 1),
+                                    borderRadius: BorderRadius.circular(5)),
+                                isExpanded: true,
+                                hint: const Text('Kosong', style: font10w6),
+                                items: guru
+                                    .map((item) => DropdownMenuItem<String>(
+                                          value: item,
+                                          child: Text(item, style: font12w5),
+                                        ))
+                                    .toList(),
+                                value: selectedguru,
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedguru = value as String;
+                                  });
+                                },
+                                itemHeight: 30,
+                                // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
                               ),
                             ),
                           ),
-                          DataCell(
-                            Container(
-                              // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
-                              // margin: const EdgeInsets.only(top: 10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                border: const Border(
-                                  bottom: BorderSide(color: Colors.black),
-                                  top: BorderSide(color: Colors.black),
-                                  left: BorderSide(color: Colors.black),
-                                  right: BorderSide(color: Colors.black),
-                                ),
+                        ),
+                        DataCell(
+                          Container(
+                            // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
+                            // margin: const EdgeInsets.only(top: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: const Border(
+                                bottom: BorderSide(color: Colors.black),
+                                top: BorderSide(color: Colors.black),
+                                left: BorderSide(color: Colors.black),
+                                right: BorderSide(color: Colors.black),
                               ),
-                              child: DropdownButtonHideUnderline(
-                                child: DropdownButton2(
-                                  barrierColor: Colors.grey.withOpacity(0.5),
-                                  dropdownDecoration: BoxDecoration(
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      borderRadius: BorderRadius.circular(5)),
-                                  isExpanded: true,
-                                  hint: const Text('Guru', style: font10w6),
-                                  items: guru
-                                      .map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(item, style: font12w5),
-                                          ))
-                                      .toList(),
-                                  value: selectedguru,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      selectedguru = value as String;
-                                    });
-                                  },
-                                  itemHeight: 30,
-                                  // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
-                                ),
+                            ),
+                            child: DropdownButtonHideUnderline(
+                              child: DropdownButton2(
+                                barrierColor: Colors.grey.withOpacity(0.5),
+                                dropdownDecoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.black, width: 1),
+                                    borderRadius: BorderRadius.circular(5)),
+                                isExpanded: true,
+                                hint: const Text('Kosong', style: font10w6),
+                                items: guru
+                                    .map((item) => DropdownMenuItem<String>(
+                                          value: item,
+                                          child: Text(item, style: font12w5),
+                                        ))
+                                    .toList(),
+                                value: selectedguru,
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedguru = value as String;
+                                  });
+                                },
+                                itemHeight: 30,
+                                // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
                               ),
                             ),
                           ),
-                          DataCell(
-                            Container(
-                              // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
-                              // margin: const EdgeInsets.only(top: 10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                border: const Border(
-                                  bottom: BorderSide(color: Colors.black),
-                                  top: BorderSide(color: Colors.black),
-                                  left: BorderSide(color: Colors.black),
-                                  right: BorderSide(color: Colors.black),
-                                ),
+                        ),
+                        DataCell(
+                          Container(
+                            // padding: const EdgeInsets.fromLTRB(0, 13, 10, 13),
+                            // margin: const EdgeInsets.only(top: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: const Border(
+                                bottom: BorderSide(color: Colors.black),
+                                top: BorderSide(color: Colors.black),
+                                left: BorderSide(color: Colors.black),
+                                right: BorderSide(color: Colors.black),
                               ),
-                              child: DropdownButtonHideUnderline(
-                                child: DropdownButton2(
-                                  barrierColor: Colors.grey.withOpacity(0.5),
-                                  dropdownDecoration: BoxDecoration(
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      borderRadius: BorderRadius.circular(5)),
-                                  isExpanded: true,
-                                  hint: const Text('Guru', style: font10w6),
-                                  items: guru
-                                      .map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(item, style: font12w5),
-                                          ))
-                                      .toList(),
-                                  value: selectedguru,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      selectedguru = value as String;
-                                    });
-                                  },
-                                  itemHeight: 30,
-                                  // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
-                                ),
+                            ),
+                            child: DropdownButtonHideUnderline(
+                              child: DropdownButton2(
+                                barrierColor: Colors.grey.withOpacity(0.5),
+                                dropdownDecoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.black, width: 1),
+                                    borderRadius: BorderRadius.circular(5)),
+                                isExpanded: true,
+                                hint: const Text('Kosong', style: font10w6),
+                                items: guru
+                                    .map((item) => DropdownMenuItem<String>(
+                                          value: item,
+                                          child: Text(item, style: font12w5),
+                                        ))
+                                    .toList(),
+                                value: selectedguru,
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedguru = value as String;
+                                  });
+                                },
+                                itemHeight: 30,
+                                // dropdownMaxHeight: MediaQuery.of(context).size.height * 0.3,
                               ),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

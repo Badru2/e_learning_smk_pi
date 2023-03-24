@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/widgets/appbar_admin.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
@@ -16,32 +17,7 @@ class _LaporBugAdminState extends State<LaporBugAdmin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          toolbarHeight: 80,
-          leading: Image.asset('assets/image/image 1.png'),
-          title: const Text(
-            'SMK PI',
-            style: font30w7,
-          ),
-          leadingWidth: 90,
-          actions: [
-            SizedBox(
-              width: 50,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(20, 30),
-                  padding: EdgeInsets.zero,
-                  visualDensity: VisualDensity(horizontal: -4, vertical: -4),
-                  backgroundColor: const Color(0xFFEE1414),
-                ),
-                child: const Icon(Icons.logout),
-              ),
-            )
-          ],
-        ),
+        appBar: AppbarAdmin(),
         body: SingleChildScrollView(
           child: Container(
             margin: const EdgeInsets.all(40),

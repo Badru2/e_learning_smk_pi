@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 const iconNoteBook = 'assets/icons/NoteBook.svg';
 const iconSetting = 'assets/icons/Setting.svg';
 const iconAbsen = 'assets/icons/Absen.svg';
@@ -19,3 +21,17 @@ const iconTwitter = 'assets/icons/twitter-circle-filled.svg';
 const iconBookCancel = 'assets/icons/book-cancel-outline.svg';
 const iconSiswa = 'assets/icons/Siswa.svg';
 const iconStudent = 'assets/icons/student.svg';
+
+class MyBullet extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 13.0,
+      width: 13.0,
+      decoration: const BoxDecoration(
+        color: Colors.black,
+        shape: BoxShape.circle,
+      ),
+    );
+  }
+}

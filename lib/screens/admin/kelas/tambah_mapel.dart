@@ -153,6 +153,7 @@ class _TambahMapelAdminState extends State<TambahMapelAdmin> {
                 ),
               ),
               //// Kelas <--
+
               const SizedBox(height: 30),
               //// Nama Guru -->
               Container(
@@ -199,6 +200,64 @@ class _TambahMapelAdminState extends State<TambahMapelAdmin> {
               ),
               //// Pilih Guru <--
               SizedBox(height: 30),
+              Container(
+                width: 590,
+                alignment: Alignment.centerLeft,
+                child: ListTile(
+                  title: const Text(
+                    'Pilih Warna ',
+                    style: font20w6b,
+                  ),
+                  subtitle: TextButton(
+                    onPressed: () {},
+                    child: Container(
+                      margin: const EdgeInsets.only(right: 320, top: 20),
+                      width: 300,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: Colors.black, width: 2),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            margin: const EdgeInsets.only(left: 10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFD9D9D9),
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Colors.black, width: 2),
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          const Text(
+                            '#D9D9D9',
+                            style: font20w6b,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 560,
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      backgroundColor: Color(0xFF367CFF),
+                      padding: EdgeInsets.fromLTRB(60, 20, 60, 20),
+                    ),
+                    child: Text('Buat'),
+                  ),
+                ),
+              )
               //// Pilih Warna -->
               // Container(
               //     child: Column(
