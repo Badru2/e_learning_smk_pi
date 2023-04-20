@@ -1,4 +1,6 @@
+import 'package:e_learning_smk_pi/screens/admin/home_screen/lapor_bug.dart';
 import 'package:e_learning_smk_pi/screens/admin/login/login_screen.dart';
+import 'package:e_learning_smk_pi/screens/murid/homescreen/widgets/lapor_bug.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,7 @@ class LaporanBug extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const AdminLoginScreen()),
+            MaterialPageRoute(builder: (context) => const LaporBugAdmin()),
           );
         },
         child: Container(

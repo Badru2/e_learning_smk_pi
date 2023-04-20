@@ -3,7 +3,9 @@ import 'package:e_learning_smk_pi/screens/admin/home_screen/belum_konfirmasi.dar
 import 'package:e_learning_smk_pi/screens/admin/home_screen/home_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/home_screen/lapor_bug.dart';
 import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/edit_jadwal.dart';
+import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/jadwal.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/detail_kelas.dart';
+import 'package:e_learning_smk_pi/screens/admin/kelas/kelas_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_mapel.dart';
 import 'package:e_learning_smk_pi/screens/admin/siswa_screen/siswa_screen.dart';
@@ -158,9 +160,9 @@ class AllScreen extends StatelessWidget {
           case 2:
             return const GuruScreenAdmin();
           case 3:
-            return const TambahMapelAdmin();
+            return const KelasScreenAdmin();
           case 4:
-            return const EditJadwalAdmin();
+            return const JadwalAdmin();
           case 5:
             return const BeritaAdmin();
           default:

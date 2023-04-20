@@ -1,5 +1,6 @@
 import 'package:e_learning_smk_pi/widgets/my_border.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
+import 'package:e_learning_smk_pi/widgets/sidebar.dart';
 import 'package:flutter/material.dart';
 
 class TambahBerita extends StatefulWidget {
@@ -207,14 +208,20 @@ class _TambahBeritaState extends State<TambahBerita> {
                                 Color(0xFF00FF38),
                               ),
                             ),
-                            //// Perintah Kosong -->
-                            // onPressed: () {}
-                            //// Perintah Kosong <--
-                            onPressed: () async {
-                              //// Perintah Backend buat logOut -->
-
-                              //// Perintah Backend buat logOut <--
+                            // Perintah Kosong -->
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => SideBarAdmin(),
+                                  ));
                             },
+                            // Perintah Kosong <--
+                            // onPressed: () async {
+                            //   //// Perintah Backend buat logOut -->
+                            //   //
+                            //   //// Perintah Backend buat logOut <--
+                            // },
                             child: const Text(
                               'Iya',
                               style: font12w5,

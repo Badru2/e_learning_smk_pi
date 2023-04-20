@@ -31,7 +31,9 @@ class _JadwalScreenKelasAdminState extends State<JadwalScreenKelasAdmin> {
                     Row(
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           icon: const Icon(
                             Icons.keyboard_arrow_left_sharp,
                             size: 30,

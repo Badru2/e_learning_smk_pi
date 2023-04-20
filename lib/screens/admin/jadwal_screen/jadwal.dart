@@ -1,20 +1,16 @@
-import 'package:data_table_2/data_table_2.dart';
-import 'package:e_learning_smk_pi/screens/admin/kelas/tambah_kelas.dart';
+import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/kelas_xi.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_x.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_xi.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/widget/kelas_xii.dart';
 import 'package:e_learning_smk_pi/widgets/appbar_admin.dart';
-import 'package:e_learning_smk_pi/widgets/sidebar_active.dart';
+import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 
-class KelasScreenAdmin extends StatefulWidget {
-  const KelasScreenAdmin({super.key});
+class JadwalAdmin extends StatelessWidget {
+  const JadwalAdmin({super.key});
 
-  @override
-  State<KelasScreenAdmin> createState() => _KelasScreenAdminState();
-}
-
-class _KelasScreenAdminState extends State<KelasScreenAdmin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,33 +24,43 @@ class _KelasScreenAdminState extends State<KelasScreenAdmin> {
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: Align(
-                    alignment: Alignment.centerRight,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(200, 41),
-                        backgroundColor: const Color(0xFF119A47),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const TambahKelasAdmin(),
-                            ));
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
-                          Icon(Icons.add),
-                          Text('Tambah Kelas'),
-                        ],
-                      ),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Jadwal Pelajaran',
+                      style: font30w7,
                     ),
                   ),
                 ),
+                // SizedBox(
+                //   width: MediaQuery.of(context).size.width,
+                //   child: Align(
+                //     alignment: Alignment.centerRight,
+                //     child: ElevatedButton(
+                //       style: ElevatedButton.styleFrom(
+                //         fixedSize: const Size(200, 41),
+                //         backgroundColor: const Color(0xFF119A47),
+                //       ),
+                //       onPressed: () {
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //               builder: (context) => const TambahKelasAdmin(),
+                //             ));
+                //       },
+                //       child: Row(
+                //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //         children: const [
+                //           Icon(Icons.add),
+                //           Text('Tambah Kelas'),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 const SizedBox(height: 20),
                 const KelasX(),
                 const SizedBox(height: 20),
-                const KelasXI(),
+                const KelasXIAdmin(),
                 const SizedBox(height: 20),
                 const KelasXII(),
                 // Container(

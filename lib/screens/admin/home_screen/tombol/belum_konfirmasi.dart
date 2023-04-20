@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/screens/admin/home_screen/belum_konfirmasi.dart';
 import 'package:e_learning_smk_pi/screens/admin/login/login_screen.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:e_learning_smk_pi/widgets/my_icons.dart';
@@ -20,7 +21,8 @@ class BelumKonfirmasi extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const AdminLoginScreen()),
+            MaterialPageRoute(
+                builder: (context) => const BelumKonfirmasiAdmin()),
           );
         },
         child: Container(

@@ -53,6 +53,16 @@ class _DetailKelasAdminState extends State<DetailKelasAdmin> {
               children: [
                 Row(
                   children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(Icons.arrow_back)),
+                    const Text('XI RPL'),
+                  ],
+                ),
+                Row(
+                  children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF2A39D6),
@@ -95,7 +105,7 @@ class _DetailKelasAdminState extends State<DetailKelasAdmin> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SideBarActive(),
+                              builder: (context) => SideBarAdmin(),
                             ));
                       },
                       child: Row(

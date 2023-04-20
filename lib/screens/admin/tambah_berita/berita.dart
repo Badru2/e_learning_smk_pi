@@ -1,3 +1,4 @@
+import 'package:e_learning_smk_pi/screens/admin/tambah_berita/tambah_berita_screen.dart';
 import 'package:e_learning_smk_pi/widgets/appbar_admin.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,13 @@ class BeritaAdmin extends StatelessWidget {
                   margin: const EdgeInsets.only(right: 90, bottom: 50),
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TambahBeritaScreen(),
+                          ));
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),

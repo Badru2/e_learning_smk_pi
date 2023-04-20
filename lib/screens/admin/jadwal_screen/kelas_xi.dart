@@ -1,15 +1,18 @@
+import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/jadwal.dart';
+import 'package:e_learning_smk_pi/screens/admin/jadwal_screen/jadwal_screen.dart';
 import 'package:e_learning_smk_pi/screens/admin/kelas/detail_kelas.dart';
+import 'package:e_learning_smk_pi/screens/murid/jadwal/jadwal_screen.dart';
 import 'package:e_learning_smk_pi/widgets/my_font.dart';
 import 'package:flutter/material.dart';
 
-class KelasXI extends StatefulWidget {
-  const KelasXI({super.key});
+class KelasXIAdmin extends StatefulWidget {
+  const KelasXIAdmin({super.key});
 
   @override
-  State<KelasXI> createState() => _KelasXIState();
+  State<KelasXIAdmin> createState() => _KelasXIAdminState();
 }
 
-class _KelasXIState extends State<KelasXI> {
+class _KelasXIAdminState extends State<KelasXIAdmin> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -53,7 +56,7 @@ class _KelasXIState extends State<KelasXI> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => DetailKelasAdmin(),
+                              builder: (context) => JadwalScreenKelasAdmin(),
                             ));
                       },
                       child: Row(
